@@ -16,7 +16,7 @@ public class ConsoleApp {
 
         }
         public void inicialization(){
-
+        //TODO commandy
         }
         public void execute(){
             System.out.println((">>"));
@@ -37,4 +37,5 @@ public class ConsoleApp {
             }while(!isExit);
         }
     }
-}
+
+
