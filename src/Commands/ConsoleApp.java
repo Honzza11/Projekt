@@ -1,4 +1,4 @@
-import Commands.Command;
+package Commands;
 
 import java.util.HashMap;
 import java.util.Scanner;
