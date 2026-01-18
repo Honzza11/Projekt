@@ -1,0 +1,58 @@
+package Commands;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class ConsoleApp {
+    private Scanner scanner;
+    private HashMap<String, Command> commands;
+    private boolean isExit;
+    private Hrac hrac;
+
+    public ConsoleApp(Hrac hrac) {
+        this.scanner = new Scanner(System.in);
+        this.commands = new HashMap<>();
+        this.isExit = false;
+        this.hrac = hrac;
+    }
+
+    public void inicialization() {
+        commands.put("jdi", new Jdi(hrac));
+        commands.put("vezmi", new Vezmi(hrac));
+        commands.put("prozkoumej", new Prozkoumej(hrac));
+        commands.put("mluv", new Mluv(hrac));
+        commands.put("inventar", new Inventar(hrac));
+        commands.put("ukoly", new Ukoly(hrac));
+        commands.put("pouzij", new Pouzij(hrac));
+        commands.put("konec", new Konec());
+        commands.put("napoveda", new Napoveda(commands.keySet()));
+    }
+
+    public void execute() {
+        System.out.print(">> ");
+        if (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            String[] parts = line.split(" ", 2);
+            String commandName = parts[0].toLowerCase();
+            String[] args = parts.length > 1 ? parts[1].split(" ") : new String[0];
+            String arg = parts.length > 1 ? parts[1] : "";
+
+            if (commands.containsKey(commandName)) {
+                Command cmd = commands.get(commandName);
+                System.out.println(cmd.execute(new String[] { arg }));
+                if (cmd.exit()) {
+                    isExit = true;
+                }
+            } else {
+                System.out.println("Neznamy prikaz. Zkus 'napoveda'.");
+            }
+        }
+    }
+
+    public void start() {
+        inicialization();
+        do {
+            execute();
+        } while (!isExit);
+    }
+}
