@@ -1,1 +1,9 @@
-{}
+{
+  "Lokace": [
+    {
+      "jmeno": "Byt",
+      "id_lokace": "loc_byt",
+      "description": "Byt hráče,kde je možné psát texty."
+    }
+  ]
+}
