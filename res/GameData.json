@@ -1,9 +1,155 @@
 {
-  "Lokace": [
+  "items": [
     {
-      "jmeno": "Byt",
-      "id_lokace": "loc_byt",
-      "description": "Byt hráče,kde je možné psát texty."
+      "id": "item_texty",
+      "name": "Texty skladeb",
+      "type": "CONSUMABLE",
+      "description": "Tvůj notýsek s texty.Spoj s beaty a můžeš vytvořit skladbu.Existují různé rarity textů."
+    },
+    {
+      "id": "item_mikrofon",
+      "name": "Mikrofon",
+      "type": "EQUIPMENT",
+      "description": "Základní nahrávací zařízení.Lze si koupit v obchodě s hudebním vybavením.Existují různé rarity mikrofonů.Přidávají bonus k vydávańí skladeb."
+    },
+    {
+      "id": "item_beaty",
+      "name": "Beaty",
+      "type": "CONSUMABLE",
+      "description": "Kvalitní instrumentálky.Spoj s texty a můžeš vytvořit skladbu.Existují různé rarity beatů."
+    },
+    {
+      "id": "item_klic",
+      "name": "Klíč od studia",
+      "type": "KEY",
+      "description": "Umožňuje vstup do studia.Získáš ho od producenta za úkol."
+    },
+    {
+      "id": "item_skladba",
+      "name": "Skladba",
+      "type": "CONSUMABLE",
+      "description": "Hotová skladba.Můžeš ji hrát na koncertech nebo s ní jít do freestyle spotu,rádia nebo studia."
     }
-  ]
+  ],
+  "characters": [
+    {
+      "id": "char_promoter",
+      "name": "Klubový Promotér",
+      "role": "NPC",
+      "homeLocationId": "loc_klub",
+      "notes": "Člověk, který ti může dohodit koncert a úkoly.Uvítá tě do světa rapu."
+    },
+    {
+      "id": "char_freestyle_rapper",
+      "name": "MC Freestyle",
+      "role": "NPC",
+      "homeLocationId": "loc_freestyle_spot",
+      "notes": "Nejúznávanější freestyle rapper ve freestyle spotu.Můžeš si u něj domluvit battle s ostatními rappery nebo s ním(pokud máš dostatečnou reputaci)."
+    },
+    {
+      "id": "char_moderator",
+      "name": "Moderátor Rádia",
+      "role": "NPC",
+      "homeLocationId": "loc_radio",
+      "notes": "Hlas, který rozhoduje o tom, co se hraje.U něj se můžeš pokusit dostat svou skladbu do rádia.Zadává úkoly."
+    },
+    {
+      "id": "char_producent",
+      "name": "TDF Producent",
+      "role": "NPC",
+      "homeLocationId": "loc_byt_producenta",
+      "notes": "Producent a tvůj nový nejlepší kamarád.Potkáš ho na ulici a provede tě hrou.Poté zůstává ve svém bytě.Zadává úkoly.Prodává beaty různé kvality."
+    }
+  ],
+  "locations": [
+    {
+      "id": "loc_byt",
+      "name": "Byt",
+      "description": "Tvůj byt, kde můžeš psát texty a odpočívat.",
+      "neighbors": [
+        "loc_ulice",
+        "loc_rolling_loud",
+        "loc_obchod"
+      ],
+      "lootTable": [
+        "item_texty"
+      ]
+    },
+    {
+      "id": "loc_ulice",
+      "name": "Ulice",
+      "description": "Rušná ulice města. Odsud se dostaneš skoro všude.",
+      "neighbors": [
+        "loc_byt",
+        "loc_klub",
+        "loc_studio",
+        "loc_byt_producenta"
+      ]
+    },
+    {
+      "id": "loc_klub",
+      "name": "Klub",
+      "description": "Noční klub, kde se schází místní scéna.",
+      "neighbors": [
+        "loc_ulice",
+        "loc_freestyle_spot"
+      ]
+    },
+    {
+      "id": "loc_obchod",
+      "name": "Obchod",
+      "description": "Obchod s hudebním vybavením.",
+      "neighbors": [
+        "loc_byt"
+      ],
+      "lootTable": [
+        "item_mikrofon"
+      ]
+    },
+    {
+      "id": "loc_studio",
+      "name": "Studio",
+      "description": "Profesionální nahrávací studio.",
+      "neighbors": [
+        "loc_ulice",
+        "loc_radio"
+      ]
+    },
+    {
+      "id": "loc_freestyle_spot",
+      "name": "Freestyle Spot",
+      "description": "Místo v parku, kde se scházejí rappeři.",
+      "neighbors": [
+        "loc_klub"
+      ]
+    },
+    {
+      "id": "loc_radio",
+      "name": "Rádio",
+      "description": "Místní rádiová stanice. Sídlo moderátora, který rozhoduje o hitech města.",
+      "neighbors": [
+        "loc_studio"
+      ]
+    },
+    {
+      "id": "loc_byt_producenta",
+      "name": "Byt Producenta",
+      "description": "Luxusní byt známého producenta.",
+      "neighbors": [
+        "loc_ulice"
+      ],
+      "lootTable": [
+        "item_klic"
+      ]
+    },
+    {
+      "id": "loc_rolling_loud",
+      "name": "Rolling Loud Atlanta 2030",
+      "description": "Legendární festival v Atlantě. Tvůj životní cíl.",
+      "neighbors": [
+        "loc_byt"
+      ]
+    }
+  ],
+  "quests": []
 }
