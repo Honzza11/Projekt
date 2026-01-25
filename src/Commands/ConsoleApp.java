@@ -1,5 +1,8 @@
 package Commands;
 
+import HerniMechaniky.GameData;
+import Lokace.Lokace;
+
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -7,13 +10,34 @@ public class ConsoleApp {
     private Scanner scanner;
     private HashMap<String, Command> commands;
     private boolean isExit;
+    private GameData gameData;
     private Hrac hrac;
 
     public ConsoleApp(Hrac hrac) {
         this.scanner = new Scanner(System.in);
         this.commands = new HashMap<>();
         this.isExit = false;
-        this.hrac = hrac;
+
+        this.gameData = GameData.loadGameDataFromResources("/GameData.json");
+        Lokace start = gameData.findLocation("loc_byt");
+        if (start == null)
+            start = new Lokace("Fallback", "Fallback");
+
+
+        this.hrac = new Hrac("Player", start, gameData);
+    }
+
+    public ConsoleApp() {
+        this.scanner = new Scanner(System.in);
+        this.commands = new HashMap<>();
+        this.isExit = false;
+
+        this.gameData = GameData.loadGameDataFromResources("/GameData.json");
+        Lokace start = gameData.findLocation("loc_byt");
+        if (start == null)
+            start = new Lokace("Fallback", "Fallback");
+
+        this.hrac = new Hrac("Player", start, gameData);
     }
 
     public void inicialization() {

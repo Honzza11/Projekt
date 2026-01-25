@@ -9,8 +9,10 @@ public class Jdi implements Command {
 
     @Override
     public String execute(String[] args) {
-        // TODO implementace pohybu hrace
-        return null;
+        if (args.length == 0) {
+            return "Kam chces jit?";
+        }
+        return hrac.jdi(args[0]);
     }
 
     @Override

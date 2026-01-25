@@ -2,31 +2,36 @@ package Lokace;
 
 import Postavy.Postavy;
 import Predmety.Predmety;
-import java.util.*;
+import com.google.gson.annotations.SerializedName;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-public abstract class Lokace {
-    protected String nazev;
-    protected String popis;
-    protected Map<String, Lokace> vychody;
-    protected List<Predmety> predmety;
-    protected List<Postavy> postavy;
+public class Lokace {
+
+    private String id;
+
+    @SerializedName("name")
+    private String nazev;
+
+    @SerializedName("description")
+    private String description;
+
+    @SerializedName("neighbors")
+    private ArrayList<String> neighbors; // IDs of neighbors
+
+    private transient Map<String, Lokace> vychody = new HashMap<>(); // Not used from JSON directly if we use IDs
+    protected List<Predmety> predmety = new ArrayList<>();
+    protected List<Postavy> postavy = new ArrayList<>();
 
     public Lokace(String nazev, String popis) {
         this.nazev = nazev;
-        this.popis = popis;
-        this.vychody = new HashMap<>();
-        this.predmety = new ArrayList<>();
-        this.postavy = new ArrayList<>();
+        this.description = popis;
     }
 
-    public void pridatVychod(String smer, Lokace lokace) {
-        // TODO pridat vychod
-        vychody.put(smer, lokace);
-    }
-
-    public Lokace getVychod(String smer) {
-        // TODO ziskat vychod
-        return vychody.get(smer);
+    public String getId() {
+        return id;
     }
 
     public String getNazev() {
@@ -34,40 +39,52 @@ public abstract class Lokace {
     }
 
     public String getPopis() {
-        return popis;
+        return description;
     }
 
-    public void pridatPredmet(Predmety predmet) {
-        // TODO pridat predmet
-        predmety.add(predmet);
+    public ArrayList<String> getNeighbors() {
+        return neighbors;
     }
 
-    public void odebratPredmet(Predmety predmet) {
-        // TODO odebrat predmet
-        predmety.remove(predmet);
-    }
+    @SerializedName("lootTable")
+    private ArrayList<String> lootTable;
 
-    public Predmety najdiPredmet(String nazev) {
-        // TODO najit predmet podle nazvu
-        return null;
-    }
-
-    public void pridatPostavu(Postavy postava) {
-        // TODO pridat postavu
-        postavy.add(postava);
-    }
-
-    public Postavy najdiPostavu(String jmeno) {
-        // TODO najit postavu podle jmena
-        return null;
-    }
-
-    public Collection<Lokace> getVychody() {
-        return vychody.values();
+    public ArrayList<String> getLootTable() {
+        return lootTable;
     }
 
     public String getSeznamVychodu() {
-        // TODO vratit seznam vychodu jako retezec
-        return null;
+        if (neighbors == null || neighbors.isEmpty()) {
+            return "Žádné východy.";
+        }
+
+        List<String> formatted = new ArrayList<>();
+        for (String n : neighbors) {
+            if (n.startsWith("loc_")) {
+                formatted.add(n.substring(4)); // Strip "loc_"
+            } else {
+                formatted.add(n);
+            }
+        }
+        return "Východy (kam můžeš jít): " + String.join(", ", formatted);
+    }
+
+    public String getSeznamPredmetu() {
+        if (lootTable == null || lootTable.isEmpty())
+            return "";
+
+        List<String> formatted = new ArrayList<>();
+        for (String item : lootTable) {
+            if (item.startsWith("item_")) {
+                formatted.add(item.substring(5)); // Strip "item_"
+            } else {
+                formatted.add(item);
+            }
+        }
+        return "\nPredmety v okoli: " + String.join(", ", formatted);
+    }
+
+    public Lokace getVychod(String smer) {
+        return vychody.get(smer);
     }
 }

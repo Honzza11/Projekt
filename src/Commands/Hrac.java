@@ -4,6 +4,7 @@ import Lokace.*;
 import Predmety.*;
 import Ukoly.*;
 import Postavy.*;
+import HerniMechaniky.GameData;
 import java.util.*;
 
 public class Hrac {
@@ -14,9 +15,12 @@ public class Hrac {
     private List<Ukoly> seznamUkolu;
     private Lokace aktualniLokace;
 
-    public Hrac(String jmeno, Lokace startovniLokace) {
+    private GameData gameData;
+
+    public Hrac(String jmeno, Lokace startovniLokace, GameData gameData) {
         this.jmeno = jmeno;
         this.aktualniLokace = startovniLokace;
+        this.gameData = gameData;
         this.penize = 0;
         this.reputace = 0;
         this.inventar = new ArrayList<>();
@@ -27,9 +31,22 @@ public class Hrac {
         return aktualniLokace;
     }
 
-    public String jdi(String smer) {
-        // TODO implementace pohybu hrace
-        return null;
+    public String jdi(String cilovaLokaceInput) {
+
+        if (aktualniLokace.getNeighbors() != null) {
+            for (String neighborId : aktualniLokace.getNeighbors()) {
+
+                if (neighborId.contains(cilovaLokaceInput) || neighborId.equalsIgnoreCase(cilovaLokaceInput)) {
+                    Lokace nova = gameData.findLocation(neighborId);
+                    if (nova != null) {
+                        aktualniLokace = nova;
+                        return "Jdes do " + nova.getNazev() + ".\n" + nova.getPopis() + "\n" + nova.getSeznamVychodu()
+                                + nova.getSeznamPredmetu();
+                    }
+                }
+            }
+        }
+        return "Tam se odsud jit neda. (Zadavej ID nebo cast ID, napr 'ulice')";
     }
 
     public String prozkoumej() {
