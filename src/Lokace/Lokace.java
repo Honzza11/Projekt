@@ -21,7 +21,7 @@ public class Lokace {
     @SerializedName("neighbors")
     private ArrayList<String> neighbors; // IDs of neighbors
 
-    private transient Map<String, Lokace> vychody = new HashMap<>(); // Not used from JSON directly if we use IDs
+    private transient Map<String, Lokace> vychody = new HashMap<>();
     protected List<Predmety> predmety = new ArrayList<>();
     protected List<Postavy> postavy = new ArrayList<>();
 
@@ -61,7 +61,7 @@ public class Lokace {
         List<String> formatted = new ArrayList<>();
         for (String n : neighbors) {
             if (n.startsWith("loc_")) {
-                formatted.add(n.substring(4)); // Strip "loc_"
+                formatted.add(n.substring(4));
             } else {
                 formatted.add(n);
             }
@@ -76,7 +76,7 @@ public class Lokace {
         List<String> formatted = new ArrayList<>();
         for (String item : lootTable) {
             if (item.startsWith("item_")) {
-                formatted.add(item.substring(5)); // Strip "item_"
+                formatted.add(item.substring(5));
             } else {
                 formatted.add(item);
             }
