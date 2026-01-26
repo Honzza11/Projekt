@@ -70,7 +70,7 @@ public class Hrac {
     }
 
     public String inventory() {
-        // TODO vypis inventare
+
         return null;
     }
 

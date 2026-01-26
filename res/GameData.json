@@ -3,19 +3,49 @@
     {
       "id": "item_texty",
       "name": "Texty skladeb",
-      "type": "CONSUMABLE",
+      "type": "INFO",
       "description": "Tvůj notýsek s texty.Spoj s beaty a můžeš vytvořit skladbu.Existují různé rarity textů."
     },
     {
       "id": "item_mikrofon",
-      "name": "Mikrofon",
+      "name": "Mikrofon v bytě producenta.",
+      "type": "INFO",
+      "description": "Je na něm napsáno 'Nesahat!!!'.Základní nahrávací zařízení.Lze si koupit v obchodě s hudebním vybavením.Existují různé rarity mikrofonů.Přidávají bonus k vydávańí skladeb."
+    },
+    {
+      "id": "item_mikrofon_common",
+      "name": "Polorozbitý mikrofon",
       "type": "EQUIPMENT",
-      "description": "Základní nahrávací zařízení.Lze si koupit v obchodě s hudebním vybavením.Existují různé rarity mikrofonů.Přidávají bonus k vydávańí skladeb."
+      "description": "Vypadá hodně opoužívaně.Cena=>25$||Bonusy pokud bude equipnutý:110% více peněz z vydávání skladeb."
+    },
+    {
+      "id": "item_mikrofon_uncommon",
+      "name": "Dětský mikrofon",
+      "type": "EQUIPMENT",
+      "description": "Minecraftový mikrofon pro děti .Cena=>75$||Bonusy pokud bude equipnutý:120% více peněz z vydávání skladeb."
+    },
+    {
+      "id": "item_mikrofon_rare",
+      "name": "Herní mikrofon",
+      "type": "EQUIPMENT",
+      "description": "Nový mikrofon,který používají hráči her.Cena=>350$||Bonusy pokud bude equipnutý:150% více peněz z vydávání skladeb."
+    },
+    {
+      "id": "item_mikrofon_epic",
+      "name": "Mid-range mikrofon",
+      "type": "EQUIPMENT",
+      "description": "Mikrofon používaný hodně známými rappery.Cena=>800$||Bonusy pokud bude equipnutý:185% více peněz z vydávání skladeb."
+    },
+    {
+      "id": "item_mikrofon_legendary",
+      "name": "Profesionální studiový mikrofon",
+      "type": "EQUIPMENT",
+      "description": "Specialní mikrofon,který se dá jenom získat v tomto obchodě a Používají ho jenom uznávaní profesionálové.=>1650$||Bonusy pokud bude equipnutý:225% více peněz z vydávání skladeb."
     },
     {
       "id": "item_beaty",
       "name": "Beaty",
-      "type": "CONSUMABLE",
+      "type": "INFO",
       "description": "Kvalitní instrumentálky.Spoj s texty a můžeš vytvořit skladbu.Existují různé rarity beatů."
     },
     {

@@ -19,7 +19,7 @@ public class Lokace {
     private String description;
 
     @SerializedName("neighbors")
-    private ArrayList<String> neighbors; // IDs of neighbors
+    private ArrayList<String> neighbors;
 
     private transient Map<String, Lokace> vychody = new HashMap<>();
     protected List<Predmety> predmety = new ArrayList<>();
