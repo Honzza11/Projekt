@@ -68,7 +68,7 @@ public class ConsoleApp {
                     isExit = true;
                 }
             } else {
-                System.out.println("Neznamy prikaz. Zkus 'napoveda'.");
+                System.out.println("Neznamy prikaz.Zkus zadat prikaz:'napoveda'.");
             }
         }
     }

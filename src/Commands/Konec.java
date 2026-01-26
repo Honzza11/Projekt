@@ -3,8 +3,7 @@ package Commands;
 public class Konec implements Command {
     @Override
     public String execute(String[] args) {
-        // TODO provedeni prikazu konec
-        return null;
+        return "konec";
     }
 
     @Override
