@@ -9,8 +9,7 @@ public class Inventar implements Command {
 
     @Override
     public String execute(String[] args) {
-        // TODO provedeni prikazu inventar
-        return null;
+        return hrac.inventar();
     }
 
     @Override

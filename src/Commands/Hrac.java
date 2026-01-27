@@ -1,5 +1,6 @@
 package Commands;
 
+
 import Lokace.*;
 import Predmety.*;
 import Ukoly.*;
@@ -69,9 +70,11 @@ public class Hrac {
         return null;
     }
 
-    public String inventory() {
-
-        return null;
+    public String inventar() {
+        if(inventar.isEmpty()){
+            return "Tvůj inventář je prázdný.";
+        }
+        return Arrays.toString(inventar.toArray());
     }
 
     public String showUkoly() {
@@ -97,5 +100,11 @@ public class Hrac {
     public String freestyle() {
         // TODO implementace freestyle
         return null;
+    }
+
+    @Override
+    public String toString() {
+        return "Předměty ve tvém inventáři:"+
+                 inventar+"\n||||||";
     }
 }
