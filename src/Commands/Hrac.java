@@ -1,8 +1,7 @@
 package Commands;
 
-
 import Lokace.*;
-import Predmety.*;
+import Predmety.Predmety;
 import Ukoly.*;
 import Postavy.*;
 import HerniMechaniky.GameData;
@@ -71,7 +70,7 @@ public class Hrac {
     }
 
     public String inventar() {
-        if(inventar.isEmpty()){
+        if (inventar.isEmpty()) {
             return "Tvůj inventář je prázdný.";
         }
         return Arrays.toString(inventar.toArray());
@@ -104,7 +103,7 @@ public class Hrac {
 
     @Override
     public String toString() {
-        return "Předměty ve tvém inventáři:"+
-                 inventar+"\n||||||";
+        return "Předměty ve tvém inventáři:" +
+                inventar + "\n||||||";
     }
 }

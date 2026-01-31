@@ -1,15 +1,30 @@
 package Predmety;
 
-public class Predmety {
-    protected String id;
-    protected String nazev;
-    protected String type;
-    protected String popis;
-    protected int cena;
-    protected String rarita;
-    protected double bonus;
+import com.google.gson.annotations.SerializedName;
 
-    public Predmety(String id, String nazev, String type, String popis, int cena, String rarita, double bonus) {
+public class Predmety {
+    @SerializedName("id")
+    protected String id;
+
+    @SerializedName("name")
+    protected String nazev;
+
+    @SerializedName("type")
+    protected String type;
+
+    @SerializedName("description")
+    protected String popis;
+
+    @SerializedName("cena")
+    protected String cena;
+
+    @SerializedName("rarity")
+    protected String rarita;
+
+    @SerializedName("bonus")
+    protected String bonus;
+
+    public Predmety(String id, String nazev, String type, String popis, String cena, String rarita, String bonus) {
         this.id = id;
         this.nazev = nazev;
         this.type = type;
@@ -35,7 +50,7 @@ public class Predmety {
         return popis;
     }
 
-    public int getCena() {
+    public String getCena() {
         return cena;
     }
 
@@ -43,7 +58,7 @@ public class Predmety {
         return rarita;
     }
 
-    public double getBonus() {
+    public String getBonus() {
         return bonus;
     }
 
