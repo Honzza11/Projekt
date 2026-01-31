@@ -55,8 +55,22 @@ public class Hrac {
     }
 
     public String vezmi(String nazevPredmetu) {
-        // TODO implementace sebrani predmetu
-        return null;
+        if (aktualniLokace.getLootTable() == null) {
+            return "Tady nic není.";
+        }
+
+        for (String itemId : aktualniLokace.getLootTable()) {
+            Predmety predmet = gameData.findItem(itemId);
+            if (predmet != null) {
+                if (predmet.getNazev().equalsIgnoreCase(nazevPredmetu)
+                        || predmet.getId().equalsIgnoreCase(nazevPredmetu)) {
+                    inventar.add(predmet);
+                    aktualniLokace.removePredmet(itemId);
+                    return "Sebral jsi: " + predmet.getNazev();
+                }
+            }
+        }
+        return "Předmět '" + nazevPredmetu + "' tu není.";
     }
 
     public String pouzij(String nazevPredmetu) {
@@ -73,7 +87,11 @@ public class Hrac {
         if (inventar.isEmpty()) {
             return "Tvůj inventář je prázdný.";
         }
-        return Arrays.toString(inventar.toArray());
+        StringBuilder sb = new StringBuilder("V batohu máš:\n");
+        for (Predmety p : inventar) {
+            sb.append("- ").append(p.getNazev()).append("\n");
+        }
+        return sb.toString();
     }
 
     public String showUkoly() {

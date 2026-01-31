@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="odstraneni trid v polozce predmety a upraveni trid hrac a gamedata" />
+    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="upraveni tridy vezmi a pridani removepredmet pro logiku brani predmetu z lokace">
+      <change beforePath="$PROJECT_DIR$/src/Commands/Hrac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Hrac.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769875286455</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="upraveni tridy vezmi a pridani removepredmet pro logiku brani predmetu z lokace">
+      <option name="closed" value="true" />
+      <created>1769875833798</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1769875833798</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -152,6 +162,7 @@
     <MESSAGE value="Pridani nacitani predmetu a upraveni konstruktoru" />
     <MESSAGE value="upraveni jsonu,cena a bonus u mikrofonu" />
     <MESSAGE value="odstraneni trid v polozce predmety a upraveni trid hrac a gamedata" />
-    <option name="LAST_COMMIT_MESSAGE" value="odstraneni trid v polozce predmety a upraveni trid hrac a gamedata" />
+    <MESSAGE value="upraveni tridy vezmi a pridani removepredmet pro logiku brani predmetu z lokace" />
+    <option name="LAST_COMMIT_MESSAGE" value="upraveni tridy vezmi a pridani removepredmet pro logiku brani predmetu z lokace" />
   </component>
 </project>
