@@ -121,7 +121,6 @@ public class Hrac {
 
     @Override
     public String toString() {
-        return "Předměty ve tvém inventáři:" +
-                inventar + "\n||||||";
+        return inventar();
     }
 }
