@@ -6,11 +6,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.List;
+import Predmety.*;
 
 public class GameData {
-    
+
     public ArrayList<Lokace> locations;
+    public ArrayList<Predmety> items;
 
     public static GameData loadGameDataFromResources(String resourcePath) {
         Gson gson = new Gson();
@@ -25,10 +26,22 @@ public class GameData {
     }
 
     public Lokace findLocation(String id) {
-        if (locations == null) return null;
+        if (locations == null)
+            return null;
         for (Lokace l : locations) {
             if (l.getId().equals(id)) {
                 return l;
+            }
+        }
+        return null;
+    }
+
+    public Predmety findItem(String id) {
+        if (items == null)
+            return null;
+        for (Predmety p : items) {
+            if (p.getId().equals(id)) {
+                return p;
             }
         }
         return null;

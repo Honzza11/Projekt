@@ -1,20 +1,22 @@
 package Predmety;
 
-public abstract class Predmety {
+public class Predmety {
     protected String id;
     protected String nazev;
     protected String type;
     protected String popis;
     protected int cena;
     protected String rarita;
+    protected double bonus;
 
-    public Predmety(String id, String nazev, String type, String popis, int cena, String rarita) {
+    public Predmety(String id, String nazev, String type, String popis, int cena, String rarita, double bonus) {
         this.id = id;
         this.nazev = nazev;
         this.type = type;
         this.popis = popis;
         this.cena = cena;
         this.rarita = rarita;
+        this.bonus = bonus;
     }
 
     public String getId() {
@@ -39,6 +41,10 @@ public abstract class Predmety {
 
     public String getRarita() {
         return rarita;
+    }
+
+    public double getBonus() {
+        return bonus;
     }
 
     @Override
