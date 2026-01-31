@@ -1,52 +1,53 @@
 {
   "items": [
     {
-      "id": "item_texty",
-      "name": "Texty skladeb",
-      "type": "INFO",
-      "description": "Tvůj notýsek s texty.Spoj s beaty a můžeš vytvořit skladbu.Existují různé rarity textů."
+      "id": "item_text_skladby",
+      "rarity": "COMMON",
+      "name": "Text pro skladbu",
+      "type": "CONSUMABLE",
+      "description": "Hodně špatně napsaný text pro skaldbu."
     },
     {
-      "id": "item_mikrofon",
-      "name": "Mikrofon v bytě producenta.",
-      "type": "INFO",
-      "description": "Je na něm napsáno 'Nesahat!!!'.Základní nahrávací zařízení.Lze si koupit v obchodě s hudebním vybavením.Existují různé rarity mikrofonů.Přidávají bonus k vydávańí skladeb."
+      "id": "item_beat",
+      "rarity": "COMMON",
+      "name": "Beat",
+      "type": "CONSUMABLE",
+      "description": "Jeden z beatů,který producent vyrobil na začátku své kariéry."
     },
     {
       "id": "item_mikrofon_common",
+      "rarity": "COMMON",
       "name": "Polorozbitý mikrofon",
       "type": "EQUIPMENT",
       "description": "Vypadá hodně opoužívaně.Cena=>25$||Bonusy pokud bude equipnutý:110% více peněz z vydávání skladeb."
     },
     {
       "id": "item_mikrofon_uncommon",
+      "rarity": "UNCOMMON",
       "name": "Dětský mikrofon",
       "type": "EQUIPMENT",
       "description": "Minecraftový mikrofon pro děti .Cena=>75$||Bonusy pokud bude equipnutý:120% více peněz z vydávání skladeb."
     },
     {
       "id": "item_mikrofon_rare",
+      "rarity": "RARE",
       "name": "Herní mikrofon",
       "type": "EQUIPMENT",
       "description": "Nový mikrofon,který používají hráči her.Cena=>350$||Bonusy pokud bude equipnutý:150% více peněz z vydávání skladeb."
     },
     {
       "id": "item_mikrofon_epic",
+      "rarity": "EPIC",
       "name": "Mid-range mikrofon",
       "type": "EQUIPMENT",
       "description": "Mikrofon používaný hodně známými rappery.Cena=>800$||Bonusy pokud bude equipnutý:185% více peněz z vydávání skladeb."
     },
     {
       "id": "item_mikrofon_legendary",
+      "rarity": "LEGENDARY",
       "name": "Profesionální studiový mikrofon",
       "type": "EQUIPMENT",
       "description": "Specialní mikrofon,který se dá jenom získat v tomto obchodě a Používají ho jenom uznávaní profesionálové.=>1650$||Bonusy pokud bude equipnutý:225% více peněz z vydávání skladeb."
-    },
-    {
-      "id": "item_beaty",
-      "name": "Beaty",
-      "type": "INFO",
-      "description": "Kvalitní instrumentálky.Spoj s texty a můžeš vytvořit skladbu.Existují různé rarity beatů."
     },
     {
       "id": "item_klic",
@@ -102,7 +103,7 @@
         "loc_obchod"
       ],
       "lootTable": [
-        "item_texty"
+        ""
       ]
     },
     {
@@ -133,7 +134,7 @@
         "loc_byt"
       ],
       "lootTable": [
-        "item_mikrofon"
+        ""
       ]
     },
     {

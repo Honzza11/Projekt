@@ -3,8 +3,8 @@ package Predmety;
 public class Mikrofon extends Predmety {
     private double bonus;
 
-    public Mikrofon(String nazev, String popis, int cena, double bonus) {
-        super(nazev, popis, cena);
+    public Mikrofon(String id, String nazev, String type, String popis, int cena, String rarita, double bonus) {
+        super(id, nazev, type, popis, cena, rarita);
         this.bonus = bonus;
     }
 

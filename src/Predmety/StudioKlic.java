@@ -1,7 +1,7 @@
 package Predmety;
 
 public class StudioKlic extends Predmety {
-    public StudioKlic(String nazev, String popis, int cena) {
-        super(nazev, popis, cena);
+    public StudioKlic(String id, String nazev, String type, String popis, int cena, String rarita) {
+        super(id, nazev, type, popis, cena, rarita);
     }
 }
