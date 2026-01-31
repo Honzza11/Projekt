@@ -12,6 +12,7 @@
       "rarity": "COMMON",
       "name": "Beat",
       "type": "CONSUMABLE",
+      "cena":"10$",
       "description": "Jeden z beatů,který producent vyrobil na začátku své kariéry."
     },
     {
@@ -19,34 +20,44 @@
       "rarity": "COMMON",
       "name": "Polorozbitý mikrofon",
       "type": "EQUIPMENT",
-      "description": "Vypadá hodně opoužívaně.Cena=>25$||Bonusy pokud bude equipnutý:110% více peněz z vydávání skladeb."
+      "cena": "25$",
+      "bonus": "110%",
+      "description": "Vypadá hodně opoužívaně.||Bonusy pokud bude equipnutý:110% více peněz z vydávání skladeb."
     },
     {
       "id": "item_mikrofon_uncommon",
       "rarity": "UNCOMMON",
       "name": "Dětský mikrofon",
       "type": "EQUIPMENT",
-      "description": "Minecraftový mikrofon pro děti .Cena=>75$||Bonusy pokud bude equipnutý:120% více peněz z vydávání skladeb."
+      "cena": "75$",
+      "bonus": "120%",
+      "description": "Minecraftový mikrofon pro děti.||Bonusy pokud bude equipnutý:120% více peněz z vydávání skladeb."
     },
     {
       "id": "item_mikrofon_rare",
       "rarity": "RARE",
       "name": "Herní mikrofon",
       "type": "EQUIPMENT",
-      "description": "Nový mikrofon,který používají hráči her.Cena=>350$||Bonusy pokud bude equipnutý:150% více peněz z vydávání skladeb."
+      "cena":"350$",
+      "bonus": "150%",
+      "description": "Nový mikrofon,který používají hráči her.||Bonusy pokud bude equipnutý:150% více peněz z vydávání skladeb."
     },
     {
       "id": "item_mikrofon_epic",
       "rarity": "EPIC",
       "name": "Mid-range mikrofon",
       "type": "EQUIPMENT",
-      "description": "Mikrofon používaný hodně známými rappery.Cena=>800$||Bonusy pokud bude equipnutý:185% více peněz z vydávání skladeb."
+      "cena": "800$",
+      "bonus": "185%",
+      "description": "Mikrofon používaný hodně známými rappery.||Bonusy pokud bude equipnutý:185% více peněz z vydávání skladeb."
     },
     {
       "id": "item_mikrofon_legendary",
       "rarity": "LEGENDARY",
       "name": "Profesionální studiový mikrofon",
       "type": "EQUIPMENT",
+      "cena": "1650$",
+      "bonus": "225%",
       "description": "Specialní mikrofon,který se dá jenom získat v tomto obchodě a Používají ho jenom uznávaní profesionálové.=>1650$||Bonusy pokud bude equipnutý:225% více peněz z vydávání skladeb."
     },
     {

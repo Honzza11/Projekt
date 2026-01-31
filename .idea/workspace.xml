@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="Poupraveni logiky rarit a poupraveni konstruktoru">
+    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="Pridani nacitani predmetu a upraveni konstruktoru">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HerniMechaniky/GameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HerniMechaniky/GameData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Predmety/Beaty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Predmety/Beaty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Predmety/Mikrofon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Predmety/Mikrofon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Predmety/Predmety.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Predmety/Predmety.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Predmety/StudioKlic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Predmety/StudioKlic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Predmety/TextySkladeb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Predmety/TextySkladeb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/GameData.json" beforeDir="false" afterPath="$PROJECT_DIR$/res/GameData.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769871985804</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Pridani nacitani predmetu a upraveni konstruktoru">
+      <option name="closed" value="true" />
+      <created>1769873829543</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1769873829543</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -133,6 +136,7 @@
     <MESSAGE value="Pridani moznosti pohybu po mape,//TODO s predesleho commitu" />
     <MESSAGE value="Uprava" />
     <MESSAGE value="Poupraveni logiky rarit a poupraveni konstruktoru" />
-    <option name="LAST_COMMIT_MESSAGE" value="Poupraveni logiky rarit a poupraveni konstruktoru" />
+    <MESSAGE value="Pridani nacitani predmetu a upraveni konstruktoru" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pridani nacitani predmetu a upraveni konstruktoru" />
   </component>
 </project>
