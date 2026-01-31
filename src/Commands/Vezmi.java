@@ -9,8 +9,11 @@ public class Vezmi implements Command {
 
     @Override
     public String execute(String[] args) {
-        // TODO provedeni prikazu vezmi
-        return null;
+        if (args.length == 0) {
+            return "Co mám vzít? Musíš zadat název předmětu.";
+        }
+        String nazevPredmetu = args[0];
+        return hrac.vezmi(nazevPredmetu);
     }
 
     @Override

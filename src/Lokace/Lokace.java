@@ -53,6 +53,12 @@ public class Lokace {
         return lootTable;
     }
 
+    public void removePredmet(String id) {
+        if (lootTable != null) {
+            lootTable.remove(id);
+        }
+    }
+
     public String getSeznamVychodu() {
         if (neighbors == null || neighbors.isEmpty()) {
             return "Žádné východy.";
