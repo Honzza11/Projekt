@@ -31,6 +31,10 @@ public class Hrac {
         return aktualniLokace;
     }
 
+    public GameData getGameData() {
+        return gameData;
+    }
+
     public String jdi(String cilovaLokaceInput) {
 
         if (aktualniLokace.getNeighbors() != null) {
@@ -79,8 +83,19 @@ public class Hrac {
     }
 
     public String mluv(String jmenoPostavy) {
-        // TODO implementace rozhovoru
-        return null;
+        if (aktualniLokace.getNpcs() == null || aktualniLokace.getNpcs().isEmpty()) {
+            return "Nikdo tu není.";
+        }
+
+        for (String npcId : aktualniLokace.getNpcs()) {
+            Postavy postava = gameData.findCharacter(npcId);
+            if (postava != null) {
+                if (postava.getJmeno().equalsIgnoreCase(jmenoPostavy) || npcId.equals(jmenoPostavy)) {
+                    return postava.mluv();
+                }
+            }
+        }
+        return "Postava '" + jmenoPostavy + "' tu není.";
     }
 
     public String inventar() {

@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="odstraneni homelocation id z teto tridy" />
+    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="zprovozneni prikazu mluv takze tedka funguje jednoduchy dialog, udelani prikazu prozkoumej takze ted se vypisou predmety a postavy v lokaci //TODO udelani realneho dialogu s moznostmi a odpovedmi">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/GameData.json" beforeDir="false" afterPath="$PROJECT_DIR$/res/GameData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Hrac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Hrac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Mluv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Mluv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Prozkoumej.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Prozkoumej.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769951198011</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="pridani nacteni postav">
+      <option name="closed" value="true" />
+      <created>1769951385859</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1769951385859</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -220,10 +234,11 @@
     <MESSAGE value="zprovozeni prikazu vezmi" />
     <MESSAGE value="upraveni toString" />
     <MESSAGE value="odstraneni nepotrebnych trid a pripraveni tridy postavy na nacitani pres gson" />
-    <MESSAGE value="pridani nacteni postav" />
     <MESSAGE value="pripraveni metod pro postavy ve tride Lokace" />
     <MESSAGE value="smazani homelocationId a to se premistilo do lokaci kde je tedka &quot;npcs&quot;:[]" />
     <MESSAGE value="odstraneni homelocation id z teto tridy" />
-    <option name="LAST_COMMIT_MESSAGE" value="odstraneni homelocation id z teto tridy" />
+    <MESSAGE value="pridani nacteni postav" />
+    <MESSAGE value="zprovozneni prikazu mluv takze tedka funguje jednoduchy dialog, udelani prikazu prozkoumej takze ted se vypisou predmety a postavy v lokaci //TODO udelani realneho dialogu s moznostmi a odpovedmi" />
+    <option name="LAST_COMMIT_MESSAGE" value="zprovozneni prikazu mluv takze tedka funguje jednoduchy dialog, udelani prikazu prozkoumej takze ted se vypisou predmety a postavy v lokaci //TODO udelani realneho dialogu s moznostmi a odpovedmi" />
   </component>
 </project>

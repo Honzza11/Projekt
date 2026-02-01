@@ -9,8 +9,10 @@ public class Mluv implements Command {
 
     @Override
     public String execute(String[] args) {
-        // TODO provedeni prikazu mluv
-        return null;
+        if (args.length == 0 || (args.length == 1 && args[0].isEmpty())) {
+            return "S kým chceš mluvit?";
+        }
+        return hrac.mluv(args[0]);
     }
 
     @Override
