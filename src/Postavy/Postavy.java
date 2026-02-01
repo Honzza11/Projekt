@@ -14,10 +14,6 @@ public class Postavy {
 
     @SerializedName("role")
     protected String role;
-
-    @SerializedName("homeLocationId")
-    protected String homeLocationId;
-
     public Postavy(String jmeno, String popis) {
         this.jmeno = jmeno;
         this.popis = popis;
@@ -34,11 +30,6 @@ public class Postavy {
     public String getPopis() {
         return popis;
     }
-
-    public String getHomeLocationId() {
-        return homeLocationId;
-    }
-
     public String mluv() {
         return "Ahoj, jsem " + jmeno + ". " + popis;
     }
