@@ -49,13 +49,26 @@ public class Lokace {
     @SerializedName("lootTable")
     private ArrayList<String> lootTable;
 
+    @SerializedName("npcs")
+    private ArrayList<String> npcs;
+
     public ArrayList<String> getLootTable() {
         return lootTable;
+    }
+
+    public ArrayList<String> getNpcs() {
+        return npcs;
     }
 
     public void removePredmet(String id) {
         if (lootTable != null) {
             lootTable.remove(id);
+        }
+    }
+
+    public void removeNpc(String id) {
+        if (npcs != null) {
+            npcs.remove(id);
         }
     }
 
@@ -88,6 +101,21 @@ public class Lokace {
             }
         }
         return "\nPredmety v okoli: " + String.join(", ", formatted);
+    }
+
+    public String getSeznamPostav() {
+        if (npcs == null || npcs.isEmpty()) {
+            return "";
+        }
+        List<String> formatted = new ArrayList<>();
+        for (String npcId : npcs) {
+            if (npcId.startsWith("char_")) {
+                formatted.add(npcId.substring(5));
+            } else {
+                formatted.add(npcId);
+            }
+        }
+        return "\nPostavy: " + String.join(", ", formatted);
     }
 
     public Lokace getVychod(String smer) {
