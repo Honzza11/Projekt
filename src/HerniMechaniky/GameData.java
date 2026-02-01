@@ -48,4 +48,15 @@ public class GameData {
         }
         return null;
     }
+
+    public Postavy findCharacter(String id) {
+        if (characters == null)
+            return null;
+        for (Postavy p : characters) {
+            if (p.getId().equals(id)) {
+                return p;
+            }
+        }
+        return null;
+    }
 }
