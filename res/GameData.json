@@ -126,6 +126,9 @@
         "loc_studio",
         "loc_byt_producenta"
       ],
+      "lootTable": [
+        ""
+      ],
       "npcs": [
         ""
       ]
@@ -137,6 +140,9 @@
       "neighbors": [
         "loc_ulice",
         "loc_freestyle_spot"
+      ],
+      "lootTable": [
+        ""
       ],
       "npcs": [
         "char_promoter"
@@ -164,6 +170,9 @@
         "loc_ulice",
         "loc_radio"
       ],
+      "lootTable": [
+        ""
+      ],
       "npcs": [
         ""
       ]
@@ -175,6 +184,9 @@
       "neighbors": [
         "loc_klub"
       ],
+      "lootTable": [
+        ""
+      ],
       "npcs": [
         ""
       ]
@@ -185,6 +197,9 @@
       "description": "Místní rádiová stanice. Sídlo moderátora, který rozhoduje o hitech města.",
       "neighbors": [
         "loc_studio"
+      ],
+      "lootTable": [
+        ""
       ],
       "npcs": [
         ""
@@ -210,6 +225,9 @@
       "description": "Legendární festival v Atlantě. Tvůj životní cíl.",
       "neighbors": [
         "loc_byt"
+      ],
+      "lootTable": [
+        ""
       ],
       "npcs": [
         ""
