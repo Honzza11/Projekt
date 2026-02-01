@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="zprovozeni prikazu vezmi">
-      <change beforePath="$PROJECT_DIR$/src/Commands/Hrac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Hrac.java" afterDir="false" />
+    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="upraveni toString">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769876266841</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="upraveni toString">
+      <option name="closed" value="true" />
+      <created>1769876476812</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1769876476812</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -172,6 +180,7 @@
     <MESSAGE value="odstraneni trid v polozce predmety a upraveni trid hrac a gamedata" />
     <MESSAGE value="upraveni tridy vezmi a pridani removepredmet pro logiku brani predmetu z lokace" />
     <MESSAGE value="zprovozeni prikazu vezmi" />
-    <option name="LAST_COMMIT_MESSAGE" value="zprovozeni prikazu vezmi" />
+    <MESSAGE value="upraveni toString" />
+    <option name="LAST_COMMIT_MESSAGE" value="upraveni toString" />
   </component>
 </project>

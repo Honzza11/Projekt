@@ -1,12 +1,30 @@
 package Postavy;
 
-public abstract class Postavy {
+import com.google.gson.annotations.SerializedName;
+
+public class Postavy {
+    @SerializedName("id")
+    private String id;
+
+    @SerializedName("name")
     protected String jmeno;
+
+    @SerializedName("notes")
     protected String popis;
+
+    @SerializedName("role")
+    protected String role;
+
+    @SerializedName("homeLocationId")
+    protected String homeLocationId;
 
     public Postavy(String jmeno, String popis) {
         this.jmeno = jmeno;
         this.popis = popis;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getJmeno() {
@@ -17,7 +35,13 @@ public abstract class Postavy {
         return popis;
     }
 
-    public abstract String mluv();
+    public String getHomeLocationId() {
+        return homeLocationId;
+    }
+
+    public String mluv() {
+        return "Ahoj, jsem " + jmeno + ". " + popis;
+    }
 
     @Override
     public String toString() {
