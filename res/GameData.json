@@ -78,28 +78,24 @@
       "id": "char_promoter",
       "name": "Klubový Promotér",
       "role": "NPC",
-      "homeLocationId": "loc_klub",
       "notes": "Člověk, který ti může dohodit koncert a úkoly.Uvítá tě do světa rapu."
     },
     {
       "id": "char_freestyle_rapper",
       "name": "MC Freestyle",
       "role": "NPC",
-      "homeLocationId": "loc_freestyle_spot",
       "notes": "Nejúznávanější freestyle rapper ve freestyle spotu.Můžeš si u něj domluvit battle s ostatními rappery nebo s ním(pokud máš dostatečnou reputaci)."
     },
     {
       "id": "char_moderator",
       "name": "Moderátor Rádia",
       "role": "NPC",
-      "homeLocationId": "loc_radio",
       "notes": "Hlas, který rozhoduje o tom, co se hraje.U něj se můžeš pokusit dostat svou skladbu do rádia.Zadává úkoly."
     },
     {
       "id": "char_producent",
       "name": "TDF Producent",
       "role": "NPC",
-      "homeLocationId": "loc_byt_producenta",
       "notes": "Producent a tvůj nový nejlepší kamarád.Potkáš ho na ulici a provede tě hrou.Poté zůstává ve svém bytě.Zadává úkoly.Prodává beaty různé kvality."
     }
   ],
@@ -115,6 +111,9 @@
       ],
       "lootTable": [
         ""
+      ],
+      "npcs": [
+        ""
       ]
     },
     {
@@ -126,6 +125,9 @@
         "loc_klub",
         "loc_studio",
         "loc_byt_producenta"
+      ],
+      "npcs": [
+        ""
       ]
     },
     {
@@ -135,6 +137,9 @@
       "neighbors": [
         "loc_ulice",
         "loc_freestyle_spot"
+      ],
+      "npcs": [
+        "char_promoter"
       ]
     },
     {
@@ -146,6 +151,9 @@
       ],
       "lootTable": [
         ""
+      ],
+      "npcs": [
+        ""
       ]
     },
     {
@@ -155,6 +163,9 @@
       "neighbors": [
         "loc_ulice",
         "loc_radio"
+      ],
+      "npcs": [
+        ""
       ]
     },
     {
@@ -163,6 +174,9 @@
       "description": "Místo v parku, kde se scházejí rappeři.",
       "neighbors": [
         "loc_klub"
+      ],
+      "npcs": [
+        ""
       ]
     },
     {
@@ -171,6 +185,9 @@
       "description": "Místní rádiová stanice. Sídlo moderátora, který rozhoduje o hitech města.",
       "neighbors": [
         "loc_studio"
+      ],
+      "npcs": [
+        ""
       ]
     },
     {
@@ -182,6 +199,9 @@
       ],
       "lootTable": [
         "item_klic"
+      ],
+      "npcs": [
+        ""
       ]
     },
     {
@@ -190,6 +210,9 @@
       "description": "Legendární festival v Atlantě. Tvůj životní cíl.",
       "neighbors": [
         "loc_byt"
+      ],
+      "npcs": [
+        ""
       ]
     }
   ],
