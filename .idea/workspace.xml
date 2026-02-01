@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="upraveni toString">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="odstraneni nepotrebnych trid a pripraveni tridy postavy na nacitani pres gson" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769876476812</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="odstraneni nepotrebnych trid a pripraveni tridy postavy na nacitani pres gson">
+      <option name="closed" value="true" />
+      <created>1769950062817</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1769950062817</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -181,6 +187,7 @@
     <MESSAGE value="upraveni tridy vezmi a pridani removepredmet pro logiku brani predmetu z lokace" />
     <MESSAGE value="zprovozeni prikazu vezmi" />
     <MESSAGE value="upraveni toString" />
-    <option name="LAST_COMMIT_MESSAGE" value="upraveni toString" />
+    <MESSAGE value="odstraneni nepotrebnych trid a pripraveni tridy postavy na nacitani pres gson" />
+    <option name="LAST_COMMIT_MESSAGE" value="odstraneni nepotrebnych trid a pripraveni tridy postavy na nacitani pres gson" />
   </component>
 </project>
