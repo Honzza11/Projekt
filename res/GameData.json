@@ -105,9 +105,9 @@
       "name": "Byt",
       "description": "Tvůj byt, kde můžeš psát texty a odpočívat.",
       "neighbors": [
-        "loc_ulice",
-        "loc_rolling_loud",
-        "loc_obchod"
+        "Ulice",
+        "Rolling Loud",
+        "Obchod"
       ],
       "lootTable": [
         ""
@@ -121,10 +121,10 @@
       "name": "Ulice",
       "description": "Rušná ulice města. Odsud se dostaneš skoro všude.",
       "neighbors": [
-        "loc_byt",
-        "loc_klub",
-        "loc_studio",
-        "loc_byt_producenta"
+        "Byt",
+        "Klub",
+        "Studio",
+        "Byt Producenta"
       ],
       "lootTable": [
         ""
@@ -138,8 +138,8 @@
       "name": "Klub",
       "description": "Noční klub, kde se schází místní scéna.",
       "neighbors": [
-        "loc_ulice",
-        "loc_freestyle_spot"
+        "Ulice",
+        "Freestyle Spot"
       ],
       "lootTable": [
         ""
@@ -153,7 +153,7 @@
       "name": "Obchod",
       "description": "Obchod s hudebním vybavením.",
       "neighbors": [
-        "loc_byt"
+        "Byt"
       ],
       "lootTable": [
         ""
@@ -167,8 +167,8 @@
       "name": "Studio",
       "description": "Profesionální nahrávací studio.",
       "neighbors": [
-        "loc_ulice",
-        "loc_radio"
+        "Ulice",
+        "Rádio"
       ],
       "lootTable": [
         ""
@@ -182,7 +182,7 @@
       "name": "Freestyle Spot",
       "description": "Místo v parku, kde se scházejí rappeři.",
       "neighbors": [
-        "loc_klub"
+        "Klub"
       ],
       "lootTable": [
         ""
@@ -196,7 +196,7 @@
       "name": "Rádio",
       "description": "Místní rádiová stanice. Sídlo moderátora, který rozhoduje o hitech města.",
       "neighbors": [
-        "loc_studio"
+        "Studio"
       ],
       "lootTable": [
         ""
@@ -210,7 +210,7 @@
       "name": "Byt Producenta",
       "description": "Luxusní byt známého producenta.",
       "neighbors": [
-        "loc_ulice"
+        "Ulice"
       ],
       "lootTable": [
         "Klíč od studia"
@@ -224,7 +224,7 @@
       "name": "Rolling Loud Atlanta 2030",
       "description": "Legendární festival v Atlantě. Tvůj životní cíl.",
       "neighbors": [
-        "loc_byt"
+        "Byt"
       ],
       "lootTable": [
         ""

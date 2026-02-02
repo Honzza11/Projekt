@@ -27,11 +27,11 @@ public class GameData {
         }
     }
 
-    public Lokace findLocation(String id) {
+    public Lokace findLocation(String nazev) {
         if (locations == null)
             return null;
         for (Lokace l : locations) {
-            if (l.getId().equals(id)) {
+            if (l.getNazev().equals(nazev)) {
                 return l;
             }
         }
