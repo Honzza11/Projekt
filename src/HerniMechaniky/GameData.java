@@ -38,22 +38,22 @@ public class GameData {
         return null;
     }
 
-    public Predmety findItem(String id) {
+    public Predmety findItem(String nazev) {
         if (items == null)
             return null;
         for (Predmety p : items) {
-            if (p.getId().equals(id)) {
+            if (p.getNazev().equals(nazev)) {
                 return p;
             }
         }
         return null;
     }
 
-    public Postavy findCharacter(String id) {
+    public Postavy findCharacter(String jmeno) {
         if (characters == null)
             return null;
         for (Postavy p : characters) {
-            if (p.getId().equals(id)) {
+            if (p.getJmeno().equals(jmeno)) {
                 return p;
             }
         }

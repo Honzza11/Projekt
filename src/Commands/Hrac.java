@@ -84,7 +84,7 @@ public class Hrac {
         for (String npcId : aktualniLokace.getNpcs()) {
             Postavy postava = gameData.findCharacter(npcId);
             if (postava != null) {
-                if (postava.getJmeno().equalsIgnoreCase(jmenoPostavy) || npcId.equals(jmenoPostavy)) {
+                if (postava.getJmeno().equalsIgnoreCase(jmenoPostavy) || npcId.equals(jmenoPostavy)||npcId.contains(jmenoPostavy)) {
                     return postava.mluv();
                 }
             }
