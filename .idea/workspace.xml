@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="pridani postav do lokaci">
+    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="vraceni commitu">
       <change afterPath="$PROJECT_DIR$/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lokace/Lokace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lokace/Lokace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/GameData.json" beforeDir="false" afterPath="$PROJECT_DIR$/res/GameData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/Inventory.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770022097163</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="vraceni commitu">
+      <option name="closed" value="true" />
+      <created>1770022708193</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1770022708193</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -263,6 +271,7 @@
     <MESSAGE value="zprovozneni prikazu mluv takze tedka funguje jednoduchy dialog, udelani prikazu prozkoumej takze ted se vypisou predmety a postavy v lokaci //TODO udelani realneho dialogu s moznostmi a odpovedmi" />
     <MESSAGE value="lehke upraveni vypisu" />
     <MESSAGE value="pridani postav do lokaci" />
-    <option name="LAST_COMMIT_MESSAGE" value="pridani postav do lokaci" />
+    <MESSAGE value="vraceni commitu" />
+    <option name="LAST_COMMIT_MESSAGE" value="vraceni commitu" />
   </component>
 </project>

@@ -145,7 +145,7 @@
         ""
       ],
       "npcs": [
-        "Klubový Promotér"
+        "char_promoter"
       ]
     },
     {
@@ -213,7 +213,7 @@
         "loc_ulice"
       ],
       "lootTable": [
-        "klíč"
+        "item_klic"
       ],
       "npcs": [
         "TDF Producent"
