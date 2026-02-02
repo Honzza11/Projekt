@@ -94,13 +94,10 @@ public class Lokace {
 
         List<String> formatted = new ArrayList<>();
         for (String item : lootTable) {
-            if (item.startsWith("item_")) {
-                formatted.add(item.substring(5));
-            } else {
                 formatted.add(item);
-            }
+
         }
-        return "\nPredmety v okoli: " + String.join(", ", formatted);
+        return "\nPředměty v okolí: " + String.join(", ", formatted);
     }
 
     public String getSeznamPostav() {
@@ -109,11 +106,8 @@ public class Lokace {
         }
         List<String> formatted = new ArrayList<>();
         for (String npcId : npcs) {
-            if (npcId.startsWith("char_")) {
-                formatted.add(npcId.substring(5));
-            } else {
                 formatted.add(npcId);
-            }
+
         }
         return "\nPostavy: " + String.join(", ", formatted);
     }

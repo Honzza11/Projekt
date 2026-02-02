@@ -45,19 +45,13 @@ public class Hrac {
                     if (nova != null) {
                         aktualniLokace = nova;
                         return "Jdes do " + nova.getNazev() + ".\n" + nova.getPopis() + "\n" + nova.getSeznamVychodu()
-                                + nova.getSeznamPredmetu();
+                                + nova.getSeznamPredmetu()+nova.getSeznamPostav();
                     }
                 }
             }
         }
         return "Tam se odsud jit neda. (Zadavej ID nebo cast ID, napr 'ulice')";
     }
-
-    public String prozkoumej() {
-        // TODO implementace pruzkumu lokace
-        return null;
-    }
-
     public String vezmi(String nazevPredmetu) {
         if (aktualniLokace.getLootTable() == null) {
             return "Tady nic není.";

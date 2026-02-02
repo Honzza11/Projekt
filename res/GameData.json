@@ -145,7 +145,7 @@
         ""
       ],
       "npcs": [
-        "char_promoter"
+        "Klubový Promotér"
       ]
     },
     {
@@ -213,7 +213,7 @@
         "loc_ulice"
       ],
       "lootTable": [
-        "item_klic"
+        "klíč"
       ],
       "npcs": [
         ""

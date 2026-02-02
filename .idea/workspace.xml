@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="zprovozneni prikazu mluv takze tedka funguje jednoduchy dialog, udelani prikazu prozkoumej takze ted se vypisou predmety a postavy v lokaci //TODO udelani realneho dialogu s moznostmi a odpovedmi">
+      <change afterPath="$PROJECT_DIR$/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res/GameData.json" beforeDir="false" afterPath="$PROJECT_DIR$/res/GameData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Hrac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Hrac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lokace/Lokace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lokace/Lokace.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +25,12 @@
     &quot;assignee&quot;: &quot;Honzza11&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Honzza11/Projekt.git&quot;,
-    &quot;accountId&quot;: &quot;f1a68e85-0247-45da-b74c-11c3e0f8e3a7&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Honzza11/Projekt.git",
+    "accountId": "4bd4a515-97e9-4ea9-8085-28e4c5b8c3df"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
