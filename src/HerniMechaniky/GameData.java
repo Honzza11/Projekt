@@ -31,7 +31,7 @@ public class GameData {
         if (locations == null)
             return null;
         for (Lokace l : locations) {
-            if (l.getNazev().equals(nazev)) {
+            if (l.getNazev().equalsIgnoreCase(nazev) || (l.getId() != null && l.getId().equalsIgnoreCase(nazev))) {
                 return l;
             }
         }
@@ -42,7 +42,7 @@ public class GameData {
         if (items == null)
             return null;
         for (Predmety p : items) {
-            if (p.getNazev().equals(nazev)) {
+            if (p.getNazev().equalsIgnoreCase(nazev) || (p.getId() != null && p.getId().equalsIgnoreCase(nazev))) {
                 return p;
             }
         }
@@ -53,7 +53,7 @@ public class GameData {
         if (characters == null)
             return null;
         for (Postavy p : characters) {
-            if (p.getJmeno().equals(jmeno)) {
+            if (p.getJmeno().equalsIgnoreCase(jmeno) || (p.getId() != null && p.getId().equalsIgnoreCase(jmeno))) {
                 return p;
             }
         }

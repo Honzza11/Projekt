@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="upraveni toho ze tedka uzivatel muze napsat jmeno napr predmetu nebo postavy a funguje to">
-      <change afterPath="$PROJECT_DIR$/workspace.xml" afterDir="false" />
+    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="zprovozneni prikazu mluv takze tedka funguje jednoduchy dialog, udelani prikazu prozkoumej takze ted se vypisou predmety a postavy v lokaci //TODO udelani realneho dialogu s moznostmi a odpovedmi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/GameData.json" beforeDir="false" afterPath="$PROJECT_DIR$/res/GameData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Hrac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Hrac.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HerniMechaniky/GameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HerniMechaniky/GameData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,12 +23,12 @@
     &quot;assignee&quot;: &quot;Honzza11&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Honzza11/Projekt.git",
-    "accountId": "4bd4a515-97e9-4ea9-8085-28e4c5b8c3df"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Honzza11/Projekt.git&quot;,
+    &quot;accountId&quot;: &quot;f1a68e85-0247-45da-b74c-11c3e0f8e3a7&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -224,47 +223,7 @@
       <option name="project" value="LOCAL" />
       <updated>1769952589409</updated>
     </task>
-    <task id="LOCAL-00020" summary="lehke upraveni vypisu">
-      <option name="closed" value="true" />
-      <created>1770021938921</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1770021938921</updated>
-    </task>
-    <task id="LOCAL-00021" summary="pridani postav do lokaci">
-      <option name="closed" value="true" />
-      <created>1770022097163</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1770022097163</updated>
-    </task>
-    <task id="LOCAL-00022" summary="vraceni commitu">
-      <option name="closed" value="true" />
-      <created>1770022708193</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1770022708193</updated>
-    </task>
-    <task id="LOCAL-00023" summary="uprava">
-      <option name="closed" value="true" />
-      <created>1770023760406</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1770023760406</updated>
-    </task>
-    <task id="LOCAL-00024" summary="upraveni toho ze tedka uzivatel muze napsat jmeno napr predmetu nebo postavy a funguje to">
-      <option name="closed" value="true" />
-      <created>1770025646070</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1770025646070</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -286,11 +245,6 @@
     <MESSAGE value="odstraneni homelocation id z teto tridy" />
     <MESSAGE value="pridani nacteni postav" />
     <MESSAGE value="zprovozneni prikazu mluv takze tedka funguje jednoduchy dialog, udelani prikazu prozkoumej takze ted se vypisou predmety a postavy v lokaci //TODO udelani realneho dialogu s moznostmi a odpovedmi" />
-    <MESSAGE value="lehke upraveni vypisu" />
-    <MESSAGE value="pridani postav do lokaci" />
-    <MESSAGE value="vraceni commitu" />
-    <MESSAGE value="uprava" />
-    <MESSAGE value="upraveni toho ze tedka uzivatel muze napsat jmeno napr predmetu nebo postavy a funguje to" />
-    <option name="LAST_COMMIT_MESSAGE" value="upraveni toho ze tedka uzivatel muze napsat jmeno napr predmetu nebo postavy a funguje to" />
+    <option name="LAST_COMMIT_MESSAGE" value="zprovozneni prikazu mluv takze tedka funguje jednoduchy dialog, udelani prikazu prozkoumej takze ted se vypisou predmety a postavy v lokaci //TODO udelani realneho dialogu s moznostmi a odpovedmi" />
   </component>
 </project>

@@ -36,22 +36,27 @@ public class Hrac {
     }
 
     public String jdi(String cilovaLokaceInput) {
-
         if (aktualniLokace.getNeighbors() != null) {
+            String inputLower = cilovaLokaceInput.toLowerCase();
             for (String neighborId : aktualniLokace.getNeighbors()) {
+                Lokace nova = gameData.findLocation(neighborId);
+                if (nova == null)
+                    continue;
 
-                if (neighborId.contains(cilovaLokaceInput) || neighborId.equalsIgnoreCase(cilovaLokaceInput)) {
-                    Lokace nova = gameData.findLocation(neighborId);
-                    if (nova != null) {
-                        aktualniLokace = nova;
-                        return "Jdes do " + nova.getNazev() + ".\n" + nova.getPopis() + "\n" + nova.getSeznamVychodu()
-                                + nova.getSeznamPredmetu()+nova.getSeznamPostav();
-                    }
+                boolean matchLink = neighborId.toLowerCase().contains(inputLower);
+                boolean matchName = nova.getNazev().toLowerCase().contains(inputLower);
+                boolean matchId = nova.getId() != null && nova.getId().toLowerCase().contains(inputLower);
+
+                if (matchLink || matchName || matchId) {
+                    aktualniLokace = nova;
+                    return "Jdes do " + nova.getNazev() + ".\n" + nova.getPopis() + "\n" + nova.getSeznamVychodu()
+                            + nova.getSeznamPredmetu() + nova.getSeznamPostav();
                 }
             }
         }
         return "Tam se odsud jit neda. (Zadavej ID nebo cast ID, napr 'ulice')";
     }
+
     public String vezmi(String nazevPredmetu) {
         if (aktualniLokace.getLootTable() == null) {
             return "Tady nic není.";
@@ -84,7 +89,8 @@ public class Hrac {
         for (String npcId : aktualniLokace.getNpcs()) {
             Postavy postava = gameData.findCharacter(npcId);
             if (postava != null) {
-                if (postava.getJmeno().equalsIgnoreCase(jmenoPostavy) || npcId.equals(jmenoPostavy)||npcId.contains(jmenoPostavy)) {
+                if (postava.getJmeno().equalsIgnoreCase(jmenoPostavy) || npcId.equals(jmenoPostavy)
+                        || npcId.contains(jmenoPostavy)) {
                     return postava.mluv();
                 }
             }
