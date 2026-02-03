@@ -3,6 +3,7 @@ package Commands;
 import HerniMechaniky.GameData;
 import Lokace.Lokace;
 
+
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -74,6 +75,9 @@ public class ConsoleApp {
     }
 
     public void start() {
+        System.out.println("Vítejte ve hře 'Dobrodružství UG Rappera'\nZadejte své rap jméno:");
+        String jmeno = scanner.nextLine();
+        hrac.setJmeno(jmeno);
         inicialization();
         do {
             execute();

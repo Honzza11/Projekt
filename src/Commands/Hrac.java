@@ -57,6 +57,14 @@ public class Hrac {
         return "Tam se odsud jit neda. (Zadavej ID nebo cast ID, napr 'ulice')";
     }
 
+    public void setJmeno(String jmeno) {
+        this.jmeno = jmeno;
+    }
+
+    public String getJmeno() {
+        return jmeno;
+    }
+
     public String vezmi(String nazevPredmetu) {
         if (aktualniLokace.getLootTable() == null) {
             return "Tady nic není.";
@@ -107,6 +115,22 @@ public class Hrac {
             sb.append("- ").append(p.getNazev()).append("\n");
         }
         return sb.toString();
+    }
+
+    public double getPenize() {
+        return penize;
+    }
+
+    public void setPenize(double penize) {
+        this.penize = penize;
+    }
+
+    public int getReputace() {
+        return reputace;
+    }
+
+    public void setReputace(int reputace) {
+        this.reputace = reputace;
     }
 
     public String showUkoly() {

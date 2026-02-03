@@ -80,11 +80,11 @@ public class Lokace {
         List<String> formatted = new ArrayList<>();
         for (String n : neighbors) {
             if (n.startsWith("loc_")) {
-                formatted.add(n.substring(4));
+               formatted.add(n.substring(4));
             } else {
                 formatted.add(n);
             }
-        }
+       }
         return "Východy (kam můžeš jít): " + String.join(", ", formatted);
     }
 
