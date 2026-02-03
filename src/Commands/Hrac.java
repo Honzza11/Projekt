@@ -49,7 +49,7 @@ public class Hrac {
 
                 if (matchLink || matchName || matchId) {
                     aktualniLokace = nova;
-                    return "Jdes do " + nova.getNazev() + ".\n" + nova.getPopis() + "\n" + nova.getSeznamVychodu()
+                    return "Jdes do lokace: " + nova.getNazev() + ".\n" + nova.getPopis() + "\n" + nova.getSeznamVychodu()
                             + nova.getSeznamPredmetu() + nova.getSeznamPostav();
                 }
             }
