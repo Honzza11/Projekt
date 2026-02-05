@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class Napoveda implements Command {
-    Scanner scanner= new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     private Set<String> commands;
 
     public Napoveda(Set<String> commands) {
@@ -13,16 +13,14 @@ public class Napoveda implements Command {
 
     @Override
     public String execute(String[] args) {
-        System.out.println("Jaky typ napovedy chces?:\n"+"1.Prikaz\n"+"2.Hra");
+        System.out.println("Jaký typ nápovědy chceš?:\n" + "1. Příkazy\n" + "2. Rady do hry");
         String volba = scanner.nextLine();
-        if(volba.equals("1")){
-            return "jdi,vezmi,mluv....";
-            //TODO pridani vsech prikazu
-        }else if(volba.equals("2")){
-            return "Skladby muzes vytvaret ve studiu";
-            //TODO kvalitnejsi rady
+        if (volba.equals("1")) {
+            return "Dostupné příkazy: " + String.join(", ", commands);
+        } else if (volba.equals("2")) {
+            return "Pro více nápověd zajdi za producentem a ten ti pomůže.";
         }
-            return null;
+        return "Neplatná volba.";
     }
 
     @Override

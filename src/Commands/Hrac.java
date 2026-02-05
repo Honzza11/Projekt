@@ -2,7 +2,6 @@ package Commands;
 
 import Lokace.*;
 import Predmety.Predmety;
-import Ukoly.*;
 import Postavy.*;
 import HerniMechaniky.GameData;
 import java.util.*;
@@ -12,8 +11,9 @@ public class Hrac {
     private double penize;
     private int reputace;
     private List<Predmety> inventar;
-    private List<Ukoly> seznamUkolu;
+    private Predmety vybaveneMikrofon;
     private Lokace aktualniLokace;
+    private String aktivniDialogNpcId;
 
     private GameData gameData;
 
@@ -21,10 +21,17 @@ public class Hrac {
         this.jmeno = jmeno;
         this.aktualniLokace = startovniLokace;
         this.gameData = gameData;
-        this.penize = 0;
-        this.reputace = 0;
+        this.penize = 100000;
+        this.reputace = 10000;
         this.inventar = new ArrayList<>();
-        this.seznamUkolu = new ArrayList<>();
+    }
+
+    public void pridejPredmet(Predmety predmet) {
+        inventar.add(predmet);
+    }
+
+    public void odeberPredmet(Predmety predmet) {
+        inventar.remove(predmet);
     }
 
     public Lokace getAktualniLokace() {
@@ -49,7 +56,8 @@ public class Hrac {
 
                 if (matchLink || matchName || matchId) {
                     aktualniLokace = nova;
-                    return "Jdes do lokace: " + nova.getNazev() + ".\n" + nova.getPopis() + "\n" + nova.getSeznamVychodu()
+                    return "Jdes do lokace: " + nova.getNazev() + ".\n" + nova.getPopis() + "\n"
+                            + nova.getSeznamVychodu()
                             + nova.getSeznamPredmetu() + nova.getSeznamPostav();
                 }
             }
@@ -83,12 +91,6 @@ public class Hrac {
         }
         return "Předmět '" + nazevPredmetu + "' tu není.";
     }
-
-    public String pouzij(String nazevPredmetu) {
-        // TODO implementace pouziti predmetu
-        return null;
-    }
-
     public String mluv(String jmenoPostavy) {
         if (aktualniLokace.getNpcs() == null || aktualniLokace.getNpcs().isEmpty()) {
             return "Nikdo tu není.";
@@ -107,14 +109,34 @@ public class Hrac {
     }
 
     public String inventar() {
-        if (inventar.isEmpty()) {
+        if (inventar.isEmpty() && vybaveneMikrofon == null) {
             return "Tvůj inventář je prázdný.";
         }
         StringBuilder sb = new StringBuilder("V batohu máš:\n");
+        if (vybaveneMikrofon != null) {
+            sb.append("Equipment: ").append(vybaveneMikrofon.getNazev()).append("\n");
+        }
         for (Predmety p : inventar) {
-            sb.append("- ").append(p.getNazev()).append("\n");
+            String displayName = p.getNazev();
+            if ((p.getId().contains("skladba") || p.getId().contains("beat") || p.getId().contains("text"))
+                    && p.getRarita() != null) {
+                displayName += " [" + p.getRarita() + "]";
+            }
+            sb.append("- ").append(displayName).append("\n");
         }
         return sb.toString();
+    }
+
+    public Predmety getVybaveneMikrofon() {
+        return vybaveneMikrofon;
+    }
+
+    public void setVybaveneMikrofon(Predmety vybaveneMikrofon) {
+        this.vybaveneMikrofon = vybaveneMikrofon;
+    }
+
+    public List<Predmety> getInventarList() {
+        return inventar;
     }
 
     public double getPenize() {
@@ -133,31 +155,13 @@ public class Hrac {
         this.reputace = reputace;
     }
 
-    public String showUkoly() {
-        // TODO vypis ukolu
-        return null;
+    public String getAktivniDialogNpcId() {
+        return aktivniDialogNpcId;
     }
 
-    public String kup(String vec) {
-        // TODO implementace nakupu
-        return null;
+    public void setAktivniDialogNpcId(String aktivniDialogNpcId) {
+        this.aktivniDialogNpcId = aktivniDialogNpcId;
     }
-
-    public String nahravej() {
-        // TODO implementace nahravani
-        return null;
-    }
-
-    public String publikuj() {
-        // TODO implementace publikovani
-        return null;
-    }
-
-    public String freestyle() {
-        // TODO implementace freestyle
-        return null;
-    }
-
     @Override
     public String toString() {
         return inventar();

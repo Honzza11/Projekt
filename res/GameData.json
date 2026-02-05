@@ -8,12 +8,72 @@
       "description": "Hodně špatně napsaný text pro skaldbu."
     },
     {
+      "id": "item_text_rare",
+      "rarity": "RARE",
+      "name": "Kvalitní text",
+      "type": "CONSUMABLE",
+      "description": "Dobrý text s rýmy."
+    },
+    {
+      "id": "item_text_epic",
+      "rarity": "EPIC",
+      "name": "Hluboký text",
+      "type": "CONSUMABLE",
+      "description": "Text, který má myšlenku a flow."
+    },
+    {
+      "id": "item_text_legendary",
+      "rarity": "LEGENDARY",
+      "name": "Legendary Text",
+      "type": "CONSUMABLE",
+      "description": "Text, o kterém se bude mluvit roky."
+    },
+    {
+      "id": "item_text_mythic",
+      "rarity": "MYTHIC",
+      "name": "Mythic Text",
+      "type": "CONSUMABLE",
+      "description": "Text, který změní generace. Absolutní vrchol."
+    },
+    {
       "id": "item_beat",
       "rarity": "COMMON",
       "name": "Beat",
       "type": "CONSUMABLE",
-      "cena":"10$",
+      "cena": "10$",
       "description": "Jeden z beatů,který producent vyrobil na začátku své kariéry."
+    },
+    {
+      "id": "item_beat_rare",
+      "rarity": "RARE",
+      "name": "Rare Beat",
+      "type": "CONSUMABLE",
+      "cena": "300$",
+      "description": "Beat s dobrým mixem a zajímavou melodií."
+    },
+    {
+      "id": "item_beat_epic",
+      "rarity": "EPIC",
+      "name": "Epic Beat",
+      "type": "CONSUMABLE",
+      "cena": "1000$",
+      "description": "Profesionální beat, který by mohl hrát v rádiu."
+    },
+    {
+      "id": "item_beat_legendary",
+      "rarity": "LEGENDARY",
+      "name": "Legendary Beat",
+      "type": "CONSUMABLE",
+      "cena": "2500$",
+      "description": "Beat od nejlepších v oboru. Zní neuvěřitelně."
+    },
+    {
+      "id": "item_beat_mythic",
+      "rarity": "MYTHIC",
+      "name": "Mythic Beat",
+      "type": "CONSUMABLE",
+      "cena": "5000$",
+      "description": "Masterpiece. Takový beat se slyší jednou za život."
     },
     {
       "id": "item_mikrofon_common",
@@ -38,7 +98,7 @@
       "rarity": "RARE",
       "name": "Herní mikrofon",
       "type": "EQUIPMENT",
-      "cena":"350$",
+      "cena": "350$",
       "bonus": "150%",
       "description": "Nový mikrofon,který používají hráči her.||Bonusy pokud bude equipnutý:150% více peněz z vydávání skladeb."
     },
@@ -68,9 +128,38 @@
     },
     {
       "id": "item_skladba",
+      "rarity": "COMMON",
       "name": "Skladba",
       "type": "CONSUMABLE",
       "description": "Hotová skladba.Můžeš ji hrát na koncertech nebo s ní jít do freestyle spotu,rádia nebo studia."
+    },
+    {
+      "id": "item_skladba_rare",
+      "rarity": "RARE",
+      "name": "Rare Song",
+      "type": "CONSUMABLE",
+      "description": "Skladba s potenciálem."
+    },
+    {
+      "id": "item_skladba_epic",
+      "rarity": "EPIC",
+      "name": "Epic Song",
+      "type": "CONSUMABLE",
+      "description": "Tohle bude hit!"
+    },
+    {
+      "id": "item_skladba_legendary",
+      "rarity": "LEGENDARY",
+      "name": "Legendary Song",
+      "type": "CONSUMABLE",
+      "description": "Tohle je budoucí klasika."
+    },
+    {
+      "id": "item_skladba_mythic",
+      "rarity": "MYTHIC",
+      "name": "Mythic Song",
+      "type": "CONSUMABLE",
+      "description": "Tuto skladbu bude znát celý svět."
     }
   ],
   "characters": [
@@ -97,6 +186,12 @@
       "name": "TDF Producent",
       "role": "NPC",
       "notes": "Producent a tvůj nový nejlepší kamarád.Potkáš ho na ulici a provede tě hrou.Poté zůstává ve svém bytě.Zadává úkoly.Prodává beaty různé kvality."
+    },
+    {
+      "id": "npc_obchodnik",
+      "name": "Obchodník",
+      "role": "NPC",
+      "notes": "Prodává mikrofony a vybavení."
     }
   ],
   "locations": [
@@ -159,7 +254,7 @@
         ""
       ],
       "npcs": [
-        ""
+        "Obchodník"
       ]
     },
     {

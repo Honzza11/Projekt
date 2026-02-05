@@ -3,7 +3,6 @@ package Commands;
 import HerniMechaniky.GameData;
 import Lokace.Lokace;
 
-
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -23,7 +22,6 @@ public class ConsoleApp {
         Lokace start = gameData.findLocation("loc_byt");
         if (start == null)
             start = new Lokace("Fallback", "Fallback");
-
 
         this.hrac = new Hrac("Player", start, gameData);
     }
@@ -49,9 +47,14 @@ public class ConsoleApp {
         commands.put("inventar", new Inventar(hrac));
         commands.put("ukoly", new Ukoly(hrac));
         commands.put("pouzij", new Pouzij(hrac));
+        commands.put("kup", new Kup(hrac));
+        commands.put("napsat_text", new NapsatText(hrac));
+        commands.put("vytvoritskladbu", new VytvoritSkladbu(hrac));
+        commands.put("publikuj", new Publikuj(hrac));
+        commands.put("freestyle", new Freestyle(hrac));
         commands.put("konec", new Konec());
         commands.put("napoveda", new Napoveda(commands.keySet()));
-        commands.put("info",new Info(hrac));
+        commands.put("info", new Info(hrac));
     }
 
     public void execute() {
@@ -65,10 +68,24 @@ public class ConsoleApp {
 
             if (commands.containsKey(commandName)) {
                 Command cmd = commands.get(commandName);
-                System.out.println(cmd.execute(new String[] { arg }));
+
+                // Zpracování voleb v dialogu (číselný vstup)
+                if (hrac.getAktivniDialogNpcId() != null && line.trim().matches("\\d+")) {
+                    System.out.println(commands.get("mluv").execute(new String[] { line.trim() }));
+                } else {
+                    // Resetování stavu dialogu, pokud uživatel napíše jiný příkaz
+                    if (!commandName.equals("mluv") && !commandName.equals("kup")) {
+                        hrac.setAktivniDialogNpcId(null);
+                    }
+                    System.out.println(cmd.execute(new String[] { arg }));
+                }
+
                 if (cmd.exit()) {
                     isExit = true;
                 }
+            } else if (hrac.getAktivniDialogNpcId() != null && line.trim().matches("\\d+")) {
+                // Zadáno číslo, ale commandName není příkaz - zkusit volbu v dialogu
+                System.out.println(commands.get("mluv").execute(new String[] { line.trim() }));
             } else {
                 System.out.println("Neznamy prikaz.Zkus zadat prikaz:'napoveda'.");
             }

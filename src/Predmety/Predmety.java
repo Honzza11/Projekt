@@ -34,6 +34,17 @@ public class Predmety {
         this.bonus = bonus;
     }
 
+    // Konstruktor pro kopírování s přepsáním názvu
+    public Predmety(Predmety other, String newName) {
+        this.id = other.id;
+        this.nazev = newName;
+        this.type = other.type;
+        this.popis = other.popis;
+        this.cena = other.cena;
+        this.rarita = other.rarita;
+        this.bonus = other.bonus;
+    }
+
     public String getId() {
         return id;
     }

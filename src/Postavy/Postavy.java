@@ -14,6 +14,7 @@ public class Postavy {
 
     @SerializedName("role")
     protected String role;
+
     public Postavy(String jmeno, String popis) {
         this.jmeno = jmeno;
         this.popis = popis;
@@ -30,8 +31,9 @@ public class Postavy {
     public String getPopis() {
         return popis;
     }
+
     public String mluv() {
-        return "Ahoj, jsem " + jmeno + ". " + popis;
+        return "Ahoj, jsem " + jmeno + ". Čím ti můžu pomoct?";
     }
 
     @Override

@@ -18,6 +18,20 @@ public class Prozkoumej implements Command {
         Lokace loc = hrac.getAktualniLokace();
         GameData gd = hrac.getGameData();
 
+        if (args.length > 0 && !args[0].trim().isEmpty()) {
+            String target = args[0].trim().toLowerCase();
+            if (loc.getNpcs() != null) {
+                for (String npcId : loc.getNpcs()) {
+                    Postavy p = gd.findCharacter(npcId);
+                    if (p != null) {
+                        if (p.getJmeno().toLowerCase().contains(target) || npcId.toLowerCase().contains(target)) {
+                            return p.getJmeno() + ": " + p.getPopis();
+                        }
+                    }
+                }
+            }
+        }
+
         StringBuilder sb = new StringBuilder();
         sb.append(loc.getPopis()).append("\n");
         sb.append(loc.getSeznamVychodu()).append("\n");
