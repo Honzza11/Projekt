@@ -45,22 +45,22 @@ public class Kup implements Command {
                 int rep = hrac.getReputace();
                 int reqRep = 0;
                 if (predmet.getRarita().equals("RARE"))
-                    reqRep = 10;
+                    reqRep = 250;
                 if (predmet.getRarita().equals("EPIC"))
-                    reqRep = 50;
+                    reqRep = 800;
                 if (predmet.getRarita().equals("LEGENDARY"))
-                    reqRep = 80;
+                    reqRep = 2500;
                 if (predmet.getRarita().equals("MYTHIC"))
-                    reqRep = 100;
+                    reqRep = 5000;
 
                 if (rep < reqRep) {
-                    return "Na tento beat nemáš dostatečnou reputaci! Potřebuješ: " + reqRep;
+                    return "TDF Producent: S tebou ještě nepracuju. Potřebuješ alespoň " + reqRep
+                            + " reputace, abych ti prodal tento beat! (máš " + rep + ")";
                 }
             } else {
                 return "Beaty koupíš jen u producenta.";
             }
         } else {
-            // Obecný fallback?
             return "Tohle se asi nedá koupit.";
         }
 

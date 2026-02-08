@@ -125,17 +125,18 @@ public class Freestyle implements Command {
 
         if (roll < totalChance) {
             // Výhra
-            int rewardMoney = level * 200;
-            int rewardRep = level * 50;
+            int rewardMoney = level * 500;
+            int rewardRep = level * 200;
             hrac.setPenize(hrac.getPenize() + rewardMoney);
             hrac.setReputace(hrac.getReputace() + rewardRep);
+            hrac.upravPorazeneLevely(level);
             hrac.odeberPredmet(song);
 
             String winMsg = "Použil jsi skladbu: " + song.getNazev() + " (" + song.getRarita() + ")\n" +
                     "Vyhrál jsi battle (Level " + level + ")!\nZískáváš " + rewardMoney + "$ a " + rewardRep
                     + " reputace.";
             if (level == 5) {
-                winMsg += "\nPORAZIL JSI MC FREESTYLE! Stal ses legendou města. Hra končí (nebo můžeš pokračovat).";
+                winMsg += "\nPORAZIL JSI MC FREESTYLE! Stal ses legendou města.";
             }
             return winMsg;
         } else {

@@ -1,5 +1,8 @@
 package Commands;
 
+import java.util.*;
+import Ukoly.Ukol;
+
 public class Mluv implements Command {
     private Hrac hrac;
 
@@ -24,10 +27,30 @@ public class Mluv implements Command {
                     return getProducentBeats();
                 } else if (choice == 2) {
                     return getProducentRady();
+                } else if (choice == 3) {
+                    return hrac.mluv(activeNpc);
+                }
+            } else if (activeNpc.contains("moderator")) {
+                if (choice == 1) {
+                    return "Moderátor Rádia: Tak ukaž, co v tobě je! Stačí napsat 'publikuj [název]' a uvidíme.";
+                } else if (choice == 2) {
+                    return hrac.mluv(activeNpc);
+                }
+            } else if (activeNpc.contains("freestyle_rapper")) {
+                if (choice == 1) {
+                    return getFreestyleLevelsStatus();
+                } else if (choice == 2) {
+                    return hrac.mluv(activeNpc);
                 }
             } else if (activeNpc.contains("obchodnik")) {
                 if (choice == 1) {
                     return getObchodnikNabidka();
+                }
+            } else if (activeNpc.contains("promoter")) {
+                if (choice == 1) {
+                    return "Klubový Promotér: Rolling Loud ATL 2030? To je ten největší stage na světě. Pokud se tam chceš dostat, musíš mi dokázat, že jsi absolutní špička.";
+                } else if (choice == 2) {
+                    return hrac.mluv(activeNpc);
                 }
             }
             return "Neplatná volba. Zkus to znovu.";
@@ -35,10 +58,33 @@ public class Mluv implements Command {
 
         // 2. Start konverzace
         if (input.toLowerCase().contains("producent")) {
-            hrac.setAktivniDialogNpcId("npc_producent");
-            return "TDF Producent: Čau! Co tě zajímá?\n" +
+            hrac.setAktivniDialogNpcId("char_producent");
+            String msg = "TDF Producent: Čau! Co tě zajímá?\n" +
                     "1) Chci vidět tvé beaty\n" +
                     "2) Kde se tady dají vydat skladby?";
+
+            // Dynamické přidání úkolu
+            if (hrac.getGameData().quests != null) {
+                for (Ukol q : hrac.getGameData().quests) {
+                    if (q.getGiverCharacterId().equals("char_producent")) {
+                        Ukol hracuvUkol = null;
+                        for (Ukol mq : hrac.getMojeUkoly()) {
+                            if (mq.getId().equals(q.getId())) {
+                                hracuvUkol = mq;
+                                break;
+                            }
+                        }
+
+                        if (hracuvUkol == null) {
+                            msg += "\n3) " + q.getNazev();
+                        } else if (!hracuvUkol.isSplneno()) {
+                            msg += "\n3) " + q.getNazev() + " (v průběhu)";
+                        }
+                        break;
+                    }
+                }
+            }
+            return msg;
         }
 
         if (input.toLowerCase().contains("obchod") || input.toLowerCase().contains("obchodnik")) {
@@ -47,16 +93,118 @@ public class Mluv implements Command {
                     "1) Chci vidět nabídku mikrofonů";
         }
 
+        if (input.toLowerCase().contains("moderator") || input.toLowerCase().contains("radio")) {
+            hrac.setAktivniDialogNpcId("char_moderator");
+            String msg = "Moderátor Rádia: Čau! Chceš se stát hvězdou?\n" +
+                    "1) Jak můžu publikovat skladbu?";
+
+            // Dynamické přidání úkolu
+            if (hrac.getGameData().quests != null) {
+                for (Ukol q : hrac.getGameData().quests) {
+                    if (q.getGiverCharacterId().equals("char_moderator")) {
+                        Ukol hracuvUkol = null;
+                        for (Ukol mq : hrac.getMojeUkoly()) {
+                            if (mq.getId().equals(q.getId())) {
+                                hracuvUkol = mq;
+                                break;
+                            }
+                        }
+
+                        if (hracuvUkol == null) {
+                            msg += "\n2) " + q.getNazev();
+                        } else if (!hracuvUkol.isSplneno()) {
+                            msg += "\n2) " + q.getNazev() + " (v průběhu)";
+                        }
+                        break;
+                    }
+                }
+            }
+            return msg;
+        }
+
+        if (input.toLowerCase().contains("freestyle") || input.toLowerCase().contains("rapper")) {
+            hrac.setAktivniDialogNpcId("char_freestyle_rapper");
+            String msg = "MC Freestyle: Čau! Chceš zkusit battle?\n" +
+                    "1) Ukázání levelů freestyle battlů";
+
+            // Dynamické přidání úkolu
+            if (hrac.getGameData().quests != null) {
+                for (Ukol q : hrac.getGameData().quests) {
+                    if (q.getGiverCharacterId().equals("char_freestyle_rapper")) {
+                        Ukol hracuvUkol = null;
+                        for (Ukol mq : hrac.getMojeUkoly()) {
+                            if (mq.getId().equals(q.getId())) {
+                                hracuvUkol = mq;
+                                break;
+                            }
+                        }
+
+                        if (hracuvUkol == null) {
+                            msg += "\n2) " + q.getNazev();
+                        } else if (!hracuvUkol.isSplneno()) {
+                            msg += "\n2) " + q.getNazev() + " (v průběhu)";
+                        }
+                        break;
+                    }
+                }
+            }
+            return msg;
+        }
+
+        if (input.toLowerCase().contains("promoter") || input.toLowerCase().contains("klub")) {
+            hrac.setAktivniDialogNpcId("char_promoter");
+            String msg = "Klubový Promotér: Čau, vypadáš jako někdo, kdo hledá velkou příležitost.\n" +
+                    "1) Otázka na Rolling Loud ATL 2030";
+
+            // Dynamické přidání úkolu
+            if (hrac.getGameData().quests != null) {
+                for (Ukol q : hrac.getGameData().quests) {
+                    if (q.getGiverCharacterId().equals("char_promoter")) {
+                        Ukol hracuvUkol = null;
+                        for (Ukol mq : hrac.getMojeUkoly()) {
+                            if (mq.getId().equals(q.getId())) {
+                                hracuvUkol = mq;
+                                break;
+                            }
+                        }
+
+                        if (hracuvUkol == null) {
+                            msg += "\n2) " + q.getNazev();
+                        } else if (!hracuvUkol.isSplneno()) {
+                            msg += "\n2) " + q.getNazev() + " (v průběhu)";
+                        }
+                        break;
+                    }
+                }
+            }
+            return msg;
+        }
+
         return hrac.mluv(input);
+    }
+
+    private String getFreestyleLevelsStatus() {
+        StringBuilder sb = new StringBuilder("Status levelů freestyle battlů:\n");
+        Set<Integer> defeated = hrac.getPorazeneFreestyleLevely();
+        for (int i = 1; i <= 5; i++) {
+            sb.append("- Level ").append(i);
+            if (defeated.contains(i)) {
+                sb.append(" [PORAŽENO]");
+            } else {
+                sb.append(" [Zatím neporaženo]");
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
     }
 
     private String getProducentBeats() {
         return "Nabídka beatů (napiš 'kup [nazev]'):\n" +
                 "- Beat [COMMON] - 10$\n" +
-                "- Rare Beat [RARE] - 300$ (Rep 10+)\n" +
-                "- Epic Beat [EPIC] - 1000$ (Rep 50+)\n" +
-                "- Legendary Beat [LEGENDARY] - 2500$ (Rep 80+)\n" +
-                "- Mythic Beat [MYTHIC] - 5000$ (Rep 100+)";
+                "- Rare Beat [RARE] - 400$ (Rep 250+)\n" +
+                "- Epic Beat [EPIC] - 1200$ (Rep 800+)\n" +
+                "- Legendary Beat [LEGENDARY] - 3000$ (Rep 2500+)\n" +
+                "- Mythic Beat [MYTHIC] - 7500$ (Rep 5000+)";
     }
 
     private String getProducentRady() {
@@ -67,11 +215,11 @@ public class Mluv implements Command {
 
     private String getObchodnikNabidka() {
         return "Obchodník: Mám tyhle mikrofony (napiš 'kup [nazev]'):\n" +
-                "- Polorozbitý mikrofon (Common) - 25$ (+10%)\n" +
-                "- Dětský mikrofon (Uncommon) - 75$ (+20%)\n" +
-                "- Herní mikrofon (Rare) - 350$ (+50%)\n" +
-                "- Mid-range mikrofon (Epic) - 800$ (+85%)\n" +
-                "- Profesionální studiový mikrofon (Legendary) - 1650$ (+125%)";
+                "- Polorozbitý mikrofon (Common) - 150$ (+110%)\n" +
+                "- Dětský mikrofon (Uncommon) - 500$ (+120%)\n" +
+                "- Herní mikrofon (Rare) - 2000$ (+150%)\n" +
+                "- Mid-range mikrofon (Epic) - 5000$ (+185%)\n" +
+                "- Profesionální studiový mikrofon (Legendary) - 12000$ (+225%)";
     }
 
     @Override

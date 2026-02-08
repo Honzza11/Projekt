@@ -4,16 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="zprovozneni prikazu mluv takze tedka funguje jednoduchy dialog, udelani prikazu prozkoumej takze ted se vypisou predmety a postavy v lokaci //TODO udelani realneho dialogu s moznostmi a odpovedmi">
+    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="Pridani logiky vydavani skladeb a vseho okolo toho(rarity textu a beatu a skladeb,vytvareni textu,random jmena pro skladby beaty a texty//mozna upravenit tech jmen),,dialogu,freestyle battlu,kupovani predemtu|Pridani komentaru,.Upraveni prikazu napoveda,prozkoumej,">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res/GameData.json" beforeDir="false" afterPath="$PROJECT_DIR$/res/GameData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/ConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/ConsoleApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Freestyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Freestyle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/Hrac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Hrac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Kup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Kup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/Mluv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Mluv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Napoveda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Napoveda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Prozkoumej.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Prozkoumej.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Postavy/Postavy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Postavy/Postavy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Predmety/Predmety.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Predmety/Predmety.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Publikuj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Publikuj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Ukoly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Ukoly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HerniMechaniky/Freestyle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HerniMechaniky/GameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HerniMechaniky/GameData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HerniMechaniky/HerniMechaniky.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HerniMechaniky/ObchodKoupeni.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HerniMechaniky/PublikovaniRadio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HerniMechaniky/PublikovaniStudio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HerniMechaniky/VytvoreniSkladbyByt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HerniMechaniky/VytvoreniSkladbyStudio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ukoly/Ukoly.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769952589409</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Pridani logiky vydavani skladeb a vseho okolo toho(rarity textu a beatu a skladeb,vytvareni textu,random jmena pro skladby beaty a texty//mozna upravenit tech jmen),,dialogu,freestyle battlu,kupovani predemtu|Pridani komentaru,.Upraveni prikazu napoveda,prozkoumej,">
+      <option name="closed" value="true" />
+      <created>1770308219070</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1770308219070</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -251,6 +268,7 @@
     <MESSAGE value="odstraneni homelocation id z teto tridy" />
     <MESSAGE value="pridani nacteni postav" />
     <MESSAGE value="zprovozneni prikazu mluv takze tedka funguje jednoduchy dialog, udelani prikazu prozkoumej takze ted se vypisou predmety a postavy v lokaci //TODO udelani realneho dialogu s moznostmi a odpovedmi" />
-    <option name="LAST_COMMIT_MESSAGE" value="zprovozneni prikazu mluv takze tedka funguje jednoduchy dialog, udelani prikazu prozkoumej takze ted se vypisou predmety a postavy v lokaci //TODO udelani realneho dialogu s moznostmi a odpovedmi" />
+    <MESSAGE value="Pridani logiky vydavani skladeb a vseho okolo toho(rarity textu a beatu a skladeb,vytvareni textu,random jmena pro skladby beaty a texty//mozna upravenit tech jmen),,dialogu,freestyle battlu,kupovani predemtu|Pridani komentaru,.Upraveni prikazu napoveda,prozkoumej," />
+    <option name="LAST_COMMIT_MESSAGE" value="Pridani logiky vydavani skladeb a vseho okolo toho(rarity textu a beatu a skladeb,vytvareni textu,random jmena pro skladby beaty a texty//mozna upravenit tech jmen),,dialogu,freestyle battlu,kupovani predemtu|Pridani komentaru,.Upraveni prikazu napoveda,prozkoumej," />
   </component>
 </project>

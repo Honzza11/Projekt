@@ -8,12 +8,14 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import Predmety.Predmety;
 import Postavy.Postavy;
+import Ukoly.Ukol;
 
 public class GameData {
 
     public ArrayList<Lokace> locations;
     public ArrayList<Predmety> items;
     public ArrayList<Postavy> characters;
+    public ArrayList<Ukol> quests;
 
     public static GameData loadGameDataFromResources(String resourcePath) {
         Gson gson = new Gson();
@@ -55,6 +57,17 @@ public class GameData {
         for (Postavy p : characters) {
             if (p.getJmeno().equalsIgnoreCase(jmeno) || (p.getId() != null && p.getId().equalsIgnoreCase(jmeno))) {
                 return p;
+            }
+        }
+        return null;
+    }
+
+    public Ukol findQuest(String id) {
+        if (quests == null)
+            return null;
+        for (Ukol q : quests) {
+            if (q.getId().equalsIgnoreCase(id)) {
+                return q;
             }
         }
         return null;

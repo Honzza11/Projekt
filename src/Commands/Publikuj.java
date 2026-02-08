@@ -123,7 +123,7 @@ public class Publikuj implements Command {
             finalMoney *= 1.5; // Bonusové peníze v studiu
             finalRep *= 0.5; // Menší reputace v studiu
         } else if (isRadio) {
-            // Vyvážené
+            hrac.zvyseniPublikaceRadio();
         }
 
         hrac.odeberPredmet(song);

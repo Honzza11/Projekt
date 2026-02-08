@@ -55,6 +55,7 @@ public class ConsoleApp {
         commands.put("konec", new Konec());
         commands.put("napoveda", new Napoveda(commands.keySet()));
         commands.put("info", new Info(hrac));
+        commands.put("vystoupit", new Vystoupit(hrac));
     }
 
     public void execute() {

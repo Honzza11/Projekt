@@ -48,7 +48,7 @@
       "rarity": "RARE",
       "name": "Rare Beat",
       "type": "CONSUMABLE",
-      "cena": "300$",
+      "cena": "400$",
       "description": "Beat s dobrým mixem a zajímavou melodií."
     },
     {
@@ -56,7 +56,7 @@
       "rarity": "EPIC",
       "name": "Epic Beat",
       "type": "CONSUMABLE",
-      "cena": "1000$",
+      "cena": "1200$",
       "description": "Profesionální beat, který by mohl hrát v rádiu."
     },
     {
@@ -64,7 +64,7 @@
       "rarity": "LEGENDARY",
       "name": "Legendary Beat",
       "type": "CONSUMABLE",
-      "cena": "2500$",
+      "cena": "3000$",
       "description": "Beat od nejlepších v oboru. Zní neuvěřitelně."
     },
     {
@@ -72,7 +72,7 @@
       "rarity": "MYTHIC",
       "name": "Mythic Beat",
       "type": "CONSUMABLE",
-      "cena": "5000$",
+      "cena": "7500$",
       "description": "Masterpiece. Takový beat se slyší jednou za život."
     },
     {
@@ -80,7 +80,7 @@
       "rarity": "COMMON",
       "name": "Polorozbitý mikrofon",
       "type": "EQUIPMENT",
-      "cena": "25$",
+      "cena": "150$",
       "bonus": "110%",
       "description": "Vypadá hodně opoužívaně.||Bonusy pokud bude equipnutý:110% více peněz z vydávání skladeb."
     },
@@ -89,7 +89,7 @@
       "rarity": "UNCOMMON",
       "name": "Dětský mikrofon",
       "type": "EQUIPMENT",
-      "cena": "75$",
+      "cena": "500$",
       "bonus": "120%",
       "description": "Minecraftový mikrofon pro děti.||Bonusy pokud bude equipnutý:120% více peněz z vydávání skladeb."
     },
@@ -98,7 +98,7 @@
       "rarity": "RARE",
       "name": "Herní mikrofon",
       "type": "EQUIPMENT",
-      "cena": "350$",
+      "cena": "2000$",
       "bonus": "150%",
       "description": "Nový mikrofon,který používají hráči her.||Bonusy pokud bude equipnutý:150% více peněz z vydávání skladeb."
     },
@@ -107,7 +107,7 @@
       "rarity": "EPIC",
       "name": "Mid-range mikrofon",
       "type": "EQUIPMENT",
-      "cena": "800$",
+      "cena": "5000$",
       "bonus": "185%",
       "description": "Mikrofon používaný hodně známými rappery.||Bonusy pokud bude equipnutý:185% více peněz z vydávání skladeb."
     },
@@ -116,15 +116,15 @@
       "rarity": "LEGENDARY",
       "name": "Profesionální studiový mikrofon",
       "type": "EQUIPMENT",
-      "cena": "1650$",
+      "cena": "12000$",
       "bonus": "225%",
-      "description": "Specialní mikrofon,který se dá jenom získat v tomto obchodě a Používají ho jenom uznávaní profesionálové.=>1650$||Bonusy pokud bude equipnutý:225% více peněz z vydávání skladeb."
+      "description": "Specialní mikrofon,který se dá jenom získat v tomto obchodě a Používají ho jenom uznávaní profesionálové.=>12000$||Bonusy pokud bude equipnutý:225% více peněz z vydávání skladeb."
     },
     {
       "id": "item_klic",
       "name": "Klíč od studia",
       "type": "KEY",
-      "description": "Umožňuje vstup do studia.Získáš ho od producenta za úkol."
+      "description": "Klíč, který jsi našel na ulici. Vypadá to, že by mohl pasovat do studia."
     },
     {
       "id": "item_skladba",
@@ -222,7 +222,7 @@
         "Byt Producenta"
       ],
       "lootTable": [
-        ""
+        "item_klic"
       ],
       "npcs": [
         ""
@@ -308,7 +308,7 @@
         "Ulice"
       ],
       "lootTable": [
-        "Klíč od studia"
+        ""
       ],
       "npcs": [
         "TDF Producent"
@@ -329,5 +329,36 @@
       ]
     }
   ],
-  "quests": []
+  "quests": [
+    {
+      "id": "q_mythic_song",
+      "title": "Ukaž mythickou skladbu",
+      "giverCharacterId": "char_producent",
+      "requiredItems": [
+        "item_skladba_mythic"
+      ],
+      "description": "Producent nikdy v životě neviděl mythickou skladbu a tvojí vizí je mu ji ukázat."
+    },
+    {
+      "id": "q_radio_publications",
+      "title": "Moderátorova výzva",
+      "giverCharacterId": "char_moderator",
+      "requiredPublicationsRadio": 10,
+      "description": "Moderátor rádia chce vidět tvou pracovitost. Publikuj v rádiu alespoň 10 skladeb."
+    },
+    {
+      "id": "q_freestyle_legend",
+      "title": "Poražení freestyle legendy",
+      "giverCharacterId": "char_freestyle_rapper",
+      "requiredFreestyleLevelsDefeated": 5,
+      "odmena": 500,
+      "description": "MC Freestyle tě vyzývá. Musíš porazit všech 5 úrovní freestyle battlu (1-5), abys dokázal, že jsi skutečná legenda."
+    },
+    {
+      "id": "q_final_show",
+      "title": "Ukázání,že na to máš",
+      "giverCharacterId": "char_promoter",
+      "description": "Klubový promotér ti může pomoct dostat se na Rolling Loud ATL 2030, pokud dokážeš, že jsi hvězda. Musíš mít splněné úkoly od producenta, moderátora a MC Freestyle, vlastnit nejlepší mikrofon a mít 10000+ reputace."
+    }
+  ]
 }
