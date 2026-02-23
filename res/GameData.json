@@ -121,7 +121,7 @@
       "description": "Specialní mikrofon,který se dá jenom získat v tomto obchodě a Používají ho jenom uznávaní profesionálové.=>12000$||Bonusy pokud bude equipnutý:225% více peněz z vydávání skladeb."
     },
     {
-      "id": "item_klic",
+      "id": "item_klíč",
       "name": "Klíč od studia",
       "type": "KEY",
       "description": "Klíč, který jsi našel na ulici. Vypadá to, že by mohl pasovat do studia."
@@ -222,7 +222,7 @@
         "Byt Producenta"
       ],
       "lootTable": [
-        "item_klic"
+        "item_klíč"
       ],
       "npcs": [
         ""
@@ -332,7 +332,7 @@
   "quests": [
     {
       "id": "q_mythic_song",
-      "title": "Ukaž mythickou skladbu",
+      "title": "Ukaž mythickou skladbu[ÚKOL]",
       "giverCharacterId": "char_producent",
       "requiredItems": [
         "item_skladba_mythic"
@@ -341,14 +341,14 @@
     },
     {
       "id": "q_radio_publications",
-      "title": "Moderátorova výzva",
+      "title": "Moderátorova výzva[ÚKOL]",
       "giverCharacterId": "char_moderator",
       "requiredPublicationsRadio": 10,
       "description": "Moderátor rádia chce vidět tvou pracovitost. Publikuj v rádiu alespoň 10 skladeb."
     },
     {
       "id": "q_freestyle_legend",
-      "title": "Poražení freestyle legendy",
+      "title": "Poražení freestyle legendy[ÚKOL]",
       "giverCharacterId": "char_freestyle_rapper",
       "requiredFreestyleLevelsDefeated": 5,
       "odmena": 500,
@@ -356,7 +356,7 @@
     },
     {
       "id": "q_final_show",
-      "title": "Ukázání,že na to máš",
+      "title": "Ukázání,že na to máš[ÚKOL]",
       "giverCharacterId": "char_promoter",
       "description": "Klubový promotér ti může pomoct dostat se na Rolling Loud ATL 2030, pokud dokážeš, že jsi hvězda. Musíš mít splněné úkoly od producenta, moderátora a MC Freestyle, vlastnit nejlepší mikrofon a mít 10000+ reputace."
     }

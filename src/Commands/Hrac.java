@@ -35,6 +35,7 @@ public class Hrac {
         this.porazeneFreestyleLevely = new HashSet<>();
     }
 
+
     public void pridejPredmet(Predmety predmet) {
         inventar.add(predmet);
     }
