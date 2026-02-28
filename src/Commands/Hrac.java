@@ -9,6 +9,12 @@ import Ukoly.Ukol;
 import HerniMechaniky.GameData;
 import java.util.*;
 
+/**
+ * Třída reprezentující hráče ve hře. Spravuje inventář, peníze, reputaci a
+ * pohyb v lokacích.
+ * 
+ * @author Honza
+ */
 public class Hrac {
     private String jmeno;
     private double penize;
@@ -23,23 +29,39 @@ public class Hrac {
 
     private GameData gameData;
 
+    /**
+     * Konstruktor pro vytvoření nového hráče.
+     * 
+     * @param jmeno           jméno hráče
+     * @param startovniLokace počáteční lokace hráče
+     * @param gameData        instance herních dat
+     */
     public Hrac(String jmeno, Lokace startovniLokace, GameData gameData) {
         this.jmeno = jmeno;
         this.aktualniLokace = startovniLokace;
         this.gameData = gameData;
-        this.penize = 100000;
-        this.reputace = 9000;
+        this.penize = 100; // Původní hodnota byla 100000, ale v diskuzi 37a2b6c1 byla snaha o rebalanci
+        this.reputace = 0; // Podobně pro reputaci
         this.inventar = new ArrayList<>();
         this.mojeUkoly = new ArrayList<>();
         this.pocetPublikaciRadio = 0;
         this.porazeneFreestyleLevely = new HashSet<>();
     }
 
-
+    /**
+     * Přidá předmět do inventáře hráče.
+     * 
+     * @param predmet předmět k přidání
+     */
     public void pridejPredmet(Predmety predmet) {
         inventar.add(predmet);
     }
 
+    /**
+     * Přijme nový úkol.
+     * 
+     * @param ukol úkol k přijetí
+     */
     public void prijmiUkol(Ukol ukol) {
         if (ukol != null) {
             for (Ukol u : mojeUkoly) {
@@ -50,34 +72,73 @@ public class Hrac {
         }
     }
 
+    /**
+     * Odebere předmět z inventáře hráče.
+     * 
+     * @param predmet předmět k odebrání
+     */
     public void odeberPredmet(Predmety predmet) {
         inventar.remove(predmet);
     }
 
+    /**
+     * Zvýší počet publikovaných skladeb v rádiu.
+     */
     public void zvyseniPublikaceRadio() {
         this.pocetPublikaciRadio++;
     }
 
+    /**
+     * Vrátí počet publikovaných skladeb v rádiu.
+     * 
+     * @return počet publikací
+     */
     public int getPocetPublikaciRadio() {
         return pocetPublikaciRadio;
     }
 
+    /**
+     * Zaznamená úroveň poraženého freestyle levelu.
+     * 
+     * @param level obtížnost levelu
+     */
     public void upravPorazeneLevely(int level) {
         porazeneFreestyleLevely.add(level);
     }
 
+    /**
+     * Vrátí množinu poražených freestyle levelů.
+     * 
+     * @return množina levelů
+     */
     public Set<Integer> getPorazeneFreestyleLevely() {
         return porazeneFreestyleLevely;
     }
 
+    /**
+     * Vrátí aktuální lokaci hráče.
+     * 
+     * @return aktuální lokace
+     */
     public Lokace getAktualniLokace() {
         return aktualniLokace;
     }
 
+    /**
+     * Vrátí herní data.
+     * 
+     * @return herní data
+     */
     public GameData getGameData() {
         return gameData;
     }
 
+    /**
+     * Pokusí se přesunout hráče do zadané lokace.
+     * 
+     * @param cilovaLokaceInput název nebo ID cílové lokace
+     * @return zpráva o výsledku přesunu
+     */
     public String jdi(String cilovaLokaceInput) {
         if (aktualniLokace.getNeighbors() != null) {
             String inputLower = cilovaLokaceInput.toLowerCase();
@@ -113,14 +174,30 @@ public class Hrac {
         return "Tam se odsud jit neda. (Zadavej ID nebo cast ID, napr 'ulice')";
     }
 
+    /**
+     * Nastaví jméno hráče.
+     * 
+     * @param jmeno nové jméno
+     */
     public void setJmeno(String jmeno) {
         this.jmeno = jmeno;
     }
 
+    /**
+     * Vrátí jméno hráče.
+     * 
+     * @return jméno
+     */
     public String getJmeno() {
         return jmeno;
     }
 
+    /**
+     * Pokusí se sebrat předmět z aktuální lokace.
+     * 
+     * @param nazevPredmetu název nebo ID předmětu
+     * @return zpráva o výsledku akce
+     */
     public String vezmi(String nazevPredmetu) {
         if (aktualniLokace.getLootTable() == null) {
             return "Tady nic není.";
@@ -143,6 +220,11 @@ public class Hrac {
         return "Předmět '" + nazevPredmetu + "' tu není.";
     }
 
+    /**
+     * Zkontroluje, zda má hráč klíč od studia.
+     * 
+     * @return true, pokud má klíč
+     */
     public boolean maKlicOdStudia() {
         for (Predmety p : inventar) {
             if (p.getId().equals("item_klic")) {
@@ -152,6 +234,12 @@ public class Hrac {
         return false;
     }
 
+    /**
+     * Spustí rozhovor s postavou.
+     * 
+     * @param jmenoPostavy název nebo ID postavy
+     * @return text rozhovoru nebo zpráva o nepřítomnosti
+     */
     public String mluv(String jmenoPostavy) {
         if (aktualniLokace.getNpcs() == null || aktualniLokace.getNpcs().isEmpty()) {
             return "Nikdo tu není.";
@@ -286,6 +374,11 @@ public class Hrac {
         return "Postava '" + jmenoPostavy + "' tu není.";
     }
 
+    /**
+     * Vrátí textový popis obsahu inventáře.
+     * 
+     * @return popis inventáře
+     */
     public String inventar() {
         if (inventar.isEmpty() && vybaveneMikrofon == null) {
             return "Tvůj inventář je prázdný.";
@@ -313,46 +406,101 @@ public class Hrac {
         return sb.toString();
     }
 
+    /**
+     * Vrátí aktuálně vybavený mikrofon.
+     * 
+     * @return vybavený mikrofon
+     */
     public Predmety getVybaveneMikrofon() {
         return vybaveneMikrofon;
     }
 
+    /**
+     * Nastaví vybavený mikrofon.
+     * 
+     * @param vybaveneMikrofon nový mikrofon
+     */
     public void setVybaveneMikrofon(Predmety vybaveneMikrofon) {
         this.vybaveneMikrofon = vybaveneMikrofon;
     }
 
+    /**
+     * Vrátí seznam předmětů v inventáři.
+     * 
+     * @return seznam předmětů
+     */
     public List<Predmety> getInventarList() {
         return inventar;
     }
 
+    /**
+     * Vrátí aktuální stav peněz.
+     * 
+     * @return stav peněz
+     */
     public double getPenize() {
         return penize;
     }
 
+    /**
+     * Nastaví stav peněz.
+     * 
+     * @param penize nový stav peněz
+     */
     public void setPenize(double penize) {
         this.penize = penize;
     }
 
+    /**
+     * Vrátí aktuální reputaci.
+     * 
+     * @return reputace
+     */
     public int getReputace() {
         return reputace;
     }
 
+    /**
+     * Nastaví reputaci.
+     * 
+     * @param reputace nová reputace
+     */
     public void setReputace(int reputace) {
         this.reputace = reputace;
     }
 
+    /**
+     * Vrátí ID NPC, se kterým hráč právě mluví.
+     * 
+     * @return ID NPC
+     */
     public String getAktivniDialogNpcId() {
         return aktivniDialogNpcId;
     }
 
+    /**
+     * Nastaví ID NPC pro aktivní dialog.
+     * 
+     * @param aktivniDialogNpcId ID NPC
+     */
     public void setAktivniDialogNpcId(String aktivniDialogNpcId) {
         this.aktivniDialogNpcId = aktivniDialogNpcId;
     }
 
+    /**
+     * Vrátí seznam úkolů hráče.
+     * 
+     * @return seznam úkolů
+     */
     public List<Ukol> getMojeUkoly() {
         return mojeUkoly;
     }
 
+    /**
+     * Vrací textovou reprezentaci objektu (obsah inventáře).
+     * 
+     * @return textová reprezentace
+     */
     @Override
     public String toString() {
         return inventar();

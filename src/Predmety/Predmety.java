@@ -2,6 +2,11 @@ package Predmety;
 
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Třída reprezentující předmět ve hře.
+ * 
+ * @author Honza
+ */
 public class Predmety {
     @SerializedName("id")
     protected String id;
@@ -24,6 +29,17 @@ public class Predmety {
     @SerializedName("bonus")
     protected String bonus;
 
+    /**
+     * Konstruktor pro vytvoření nového předmětu se všemi atributy.
+     * 
+     * @param id     unikátní identifikátor předmětu
+     * @param nazev  název předmětu
+     * @param type   typ předmětu (např. mikrofon, beat, text)
+     * @param popis  popis předmětu
+     * @param cena   cena předmětu (ve formátu String z JSONu)
+     * @param rarita rarita předmětu
+     * @param bonus  bonus, který předmět poskytuje
+     */
     public Predmety(String id, String nazev, String type, String popis, String cena, String rarita, String bonus) {
         this.id = id;
         this.nazev = nazev;
@@ -34,7 +50,13 @@ public class Predmety {
         this.bonus = bonus;
     }
 
-    // Konstruktor pro kopírování s přepsáním názvu
+    /**
+     * Konstruktor pro vytvoření kopie předmětu s novým názvem (používá se pro
+     * unikátní skladby).
+     * 
+     * @param other   původní předmět (šablona)
+     * @param newName nový název
+     */
     public Predmety(Predmety other, String newName) {
         this.id = other.id;
         this.nazev = newName;
@@ -45,34 +67,74 @@ public class Predmety {
         this.bonus = other.bonus;
     }
 
+    /**
+     * Vrátí ID předmětu.
+     * 
+     * @return ID
+     */
     public String getId() {
         return id;
     }
 
+    /**
+     * Vrátí název předmětu.
+     * 
+     * @return název
+     */
     public String getNazev() {
         return nazev;
     }
 
+    /**
+     * Vrátí typ předmětu.
+     * 
+     * @return typ
+     */
     public String getType() {
         return type;
     }
 
+    /**
+     * Vrátí popis předmětu.
+     * 
+     * @return popis
+     */
     public String getPopis() {
         return popis;
     }
 
+    /**
+     * Vrátí cenu předmětu.
+     * 
+     * @return cena
+     */
     public String getCena() {
         return cena;
     }
 
+    /**
+     * Vrátí raritu předmětu.
+     * 
+     * @return rarita
+     */
     public String getRarita() {
         return rarita;
     }
 
+    /**
+     * Vrátí bonus předmětu.
+     * 
+     * @return bonus
+     */
     public String getBonus() {
         return bonus;
     }
 
+    /**
+     * Vrátí textovou reprezentaci předmětu (jeho název).
+     * 
+     * @return název předmětu
+     */
     @Override
     public String toString() {
         return nazev;

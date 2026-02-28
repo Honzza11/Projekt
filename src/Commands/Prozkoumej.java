@@ -6,13 +6,29 @@ import HerniMechaniky.GameData;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Příkaz pro podrobné prozkoumání aktuální lokace nebo konkrétní postavy.
+ * 
+ * @author Honza
+ */
 public class Prozkoumej implements Command {
     private Hrac hrac;
 
+    /**
+     * Konstruktor pro příkaz Prozkoumej.
+     * 
+     * @param hrac instance hráče
+     */
     public Prozkoumej(Hrac hrac) {
         this.hrac = hrac;
     }
 
+    /**
+     * Provede prozkoumání lokace nebo postavy.
+     * 
+     * @param args parametry příkazu (nepovinný název postavy)
+     * @return podrobný popis lokace nebo postavy
+     */
     @Override
     public String execute(String[] args) {
         Lokace loc = hrac.getAktualniLokace();
@@ -54,6 +70,11 @@ public class Prozkoumej implements Command {
         return sb.toString();
     }
 
+    /**
+     * Určuje, zda příkaz ukončuje hru.
+     * 
+     * @return false (neukončuje)
+     */
     @Override
     public boolean exit() {
         return false;

@@ -2,13 +2,30 @@ package Commands;
 
 import Predmety.Predmety;
 
+/**
+ * Příkaz pro vytvoření nové skladby z beatů a textů v inventáři.
+ * 
+ * @author Honza
+ */
 public class VytvoritSkladbu implements Command {
     private Hrac hrac;
 
+    /**
+     * Konstruktor pro příkaz VytvoritSkladbu.
+     * 
+     * @param hrac instance hráče
+     */
     public VytvoritSkladbu(Hrac hrac) {
         this.hrac = hrac;
     }
 
+    /**
+     * Provede vytvoření skladby. Hráč si může vybrat beat a text podle čísla nebo
+     * názvu.
+     * 
+     * @param args parametry příkazu (nepovinné indexy beatu a textu)
+     * @return výsledek akce
+     */
     @Override
     public String execute(String[] args) {
         String locId = hrac.getAktualniLokace().getId();
@@ -139,6 +156,11 @@ public class VytvoritSkladbu implements Command {
         return "Chyba při tvorbě skladby.";
     }
 
+    /**
+     * Vygeneruje náhodný název skladby.
+     * 
+     * @return náhodný název
+     */
     private String getRandomSongName() {
         String[] adjectives = { "Temný", "Zlatý", "Rychlý", "Smutný", "Drsný", "Uliční", "Noční", "Věčný", "Mladý",
                 "Starý" };
@@ -148,6 +170,12 @@ public class VytvoritSkladbu implements Command {
         return adjectives[adjIdx] + " " + nouns[nounIdx] + " (" + (int) (Math.random() * 100) + ")";
     }
 
+    /**
+     * Vrátí číselné skóre pro raritu předmětu.
+     * 
+     * @param rarity název rarity
+     * @return číselné skóre (1-5)
+     */
     private int getRarityScore(String rarity) {
         if (rarity == null)
             return 1;
@@ -167,6 +195,11 @@ public class VytvoritSkladbu implements Command {
         }
     }
 
+    /**
+     * Určuje, zda příkaz ukončuje hru.
+     * 
+     * @return false (neukončuje)
+     */
     @Override
     public boolean exit() {
         return false;

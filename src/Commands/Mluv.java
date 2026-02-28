@@ -3,13 +3,29 @@ package Commands;
 import java.util.*;
 import Ukoly.Ukol;
 
+/**
+ * Příkaz pro rozhovor s postavami v aktuální lokaci.
+ * 
+ * @author Honza
+ */
 public class Mluv implements Command {
     private Hrac hrac;
 
+    /**
+     * Konstruktor pro příkaz Mluv.
+     * 
+     * @param hrac instance hráče
+     */
     public Mluv(Hrac hrac) {
         this.hrac = hrac;
     }
 
+    /**
+     * Provede zahájení nebo pokračování rozhovoru s postavou.
+     * 
+     * @param args parametry příkazu (název postavy nebo volba v dialogu)
+     * @return text rozhovoru nebo nabídka možností
+     */
     @Override
     public String execute(String[] args) {
         if (args.length == 0 || (args.length == 1 && args[0].isEmpty())) {
@@ -183,6 +199,11 @@ public class Mluv implements Command {
         return hrac.mluv(input);
     }
 
+    /**
+     * Vrátí stav splněných freestyle levelů.
+     * 
+     * @return textový přehled levelů
+     */
     private String getFreestyleLevelsStatus() {
         StringBuilder sb = new StringBuilder("Status levelů freestyle battlů:\n");
         Set<Integer> defeated = hrac.getPorazeneFreestyleLevely();
@@ -198,6 +219,11 @@ public class Mluv implements Command {
         return sb.toString();
     }
 
+    /**
+     * Vrátí aktuální nabídku beatů u producenta.
+     * 
+     * @return textová nabídka beatů
+     */
     private String getProducentBeats() {
         return "Nabídka beatů (napiš 'kup [nazev]'):\n" +
                 "- Beat [COMMON] - 10$\n" +
@@ -207,12 +233,22 @@ public class Mluv implements Command {
                 "- Mythic Beat [MYTHIC] - 7500$ (Rep 5000+)";
     }
 
+    /**
+     * Vrátí užitečné rady od producenta.
+     * 
+     * @return text rad
+     */
     private String getProducentRady() {
         return "TDF Producent: Jasně, poradím ti. Pokud už máš hotovou skladbu, můžeš ji zkusit udat v Rádiu (loc_radio) nebo ve Studiu (loc_studio).\n"
                 +
                 "V rádiu získáš víc slávy, ve studiu ti dají víc peněz. Stačí tam zajít a napsat 'publikuj [název_skladby]'.";
     }
 
+    /**
+     * Vrátí aktuální nabídku mikrofonů v obchodě.
+     * 
+     * @return textová nabídka mikrofonů
+     */
     private String getObchodnikNabidka() {
         return "Obchodník: Mám tyhle mikrofony (napiš 'kup [nazev]'):\n" +
                 "- Polorozbitý mikrofon (Common) - 150$ (+110%)\n" +
@@ -222,6 +258,11 @@ public class Mluv implements Command {
                 "- Profesionální studiový mikrofon (Legendary) - 12000$ (+225%)";
     }
 
+    /**
+     * Určuje, zda příkaz ukončuje hru.
+     * 
+     * @return false (neukončuje)
+     */
     @Override
     public boolean exit() {
         return false;

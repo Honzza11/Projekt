@@ -5,23 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="Pridani logiky ukolu,tedka ma skoro kazda postava ukol a je finalni ukol po kterem se umozni vystoupit na Rolling Loud 2030,upraveni cen a reputaci aby hra byla vyvazenejsi.Odstraneni zbytecnych trid.Pridani novych dialogu">
-      <change afterPath="$PROJECT_DIR$/test/HracTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Projekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projekt.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/GameData.json" beforeDir="false" afterPath="$PROJECT_DIR$/res/GameData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/ConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/ConsoleApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Freestyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Freestyle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/Hrac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Hrac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Inventar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Inventar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Jdi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Jdi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Kup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Kup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Mluv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Mluv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Prozkoumej.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Prozkoumej.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Ukoly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Ukoly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/VytvoritSkladbu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/VytvoritSkladbu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HerniMechaniky/GameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HerniMechaniky/GameData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Postavy/Postavy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Postavy/Postavy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Predmety/Predmety.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Predmety/Predmety.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ukoly/Ukol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ukoly/Ukol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/HracTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/HracTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JUnit5 Test Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,14 +39,14 @@
     &quot;assignee&quot;: &quot;Honzza11&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Honzza11/Projekt.git",
-    "accountId": "29403c4c-9ccf-423f-aa66-c7f887331f14"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Honzza11/Projekt.git&quot;,
+    &quot;accountId&quot;: &quot;f1a68e85-0247-45da-b74c-11c3e0f8e3a7&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -59,14 +66,12 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/jenik/IdeaProjects/Projekt/src",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
@@ -77,12 +82,6 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jenik\IdeaProjects\Projekt" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="" />
     </key>
   </component>
   <component name="TaskManager">

@@ -2,13 +2,30 @@ package Commands;
 
 import Predmety.Predmety;
 
+/**
+ * Příkaz pro nákup předmětů (mikrofony, beaty) v příslušných lokacích.
+ * 
+ * @author Honza
+ */
 public class Kup implements Command {
     private Hrac hrac;
 
+    /**
+     * Konstruktor pro příkaz Kup.
+     * 
+     * @param hrac instance hráče
+     */
     public Kup(Hrac hrac) {
         this.hrac = hrac;
     }
 
+    /**
+     * Provede nákup předmětu. Kontroluje dostatek peněz, reputaci a správnou
+     * lokaci.
+     * 
+     * @param args parametry příkazu (název předmětu k nákupu)
+     * @return výsledek nákupu
+     */
     @Override
     public String execute(String[] args) {
         if (args.length == 0) {
@@ -23,8 +40,6 @@ public class Kup implements Command {
         }
 
         // Logika pro specifické předměty/obchody
-        // Předpokládáme, že obchody zatím nejsou v JSONu definovány jako inventáře,
-        // nebo kontrolujeme ID lokace
         String locId = hrac.getAktualniLokace().getId();
         boolean canBuy = false;
 
@@ -92,6 +107,12 @@ public class Kup implements Command {
         return "Něco se pokazilo.";
     }
 
+    /**
+     * Vygeneruje náhodný název pro zakoupený beat.
+     * 
+     * @param baseName základní název beatu
+     * @return unikátní název beatu
+     */
     private String getRandomBeatName(String baseName) {
         String[] adjectives = { "Lo-fi", "Hardcore", "Smooth", "Bouncy", "Dark", "Epic", "Street", "Deep", "Chill",
                 "Aggressive" };
@@ -103,6 +124,11 @@ public class Kup implements Command {
         return adjectives[adjIdx] + " " + nouns[nounIdx] + " (" + (rand.nextInt(100)) + ")";
     }
 
+    /**
+     * Určuje, zda příkaz ukončuje hru.
+     * 
+     * @return false (neukončuje)
+     */
     @Override
     public boolean exit() {
         return false;

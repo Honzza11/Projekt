@@ -3,15 +3,32 @@ package Commands;
 import Predmety.Predmety;
 import java.util.Random;
 
+/**
+ * Příkaz pro provedení freestyle battlu.
+ * 
+ * @author Honza
+ */
 public class Freestyle implements Command {
     private Hrac hrac;
     private Random random;
 
+    /**
+     * Konstruktor pro příkaz Freestyle.
+     * 
+     * @param hrac instance hráče
+     */
     public Freestyle(Hrac hrac) {
         this.hrac = hrac;
         this.random = new Random();
     }
 
+    /**
+     * Provede freestyle battle na základě zvolené obtížnosti a případně zvolené
+     * skladby.
+     * 
+     * @param args parametry příkazu (obtížnost, název skladby)
+     * @return výsledek battlu
+     */
     @Override
     public String execute(String[] args) {
         if (args.length == 0 || args[0].trim().isEmpty()) {
@@ -145,6 +162,11 @@ public class Freestyle implements Command {
         }
     }
 
+    /**
+     * Určuje, zda příkaz ukončuje hru.
+     * 
+     * @return false (neukončuje)
+     */
     @Override
     public boolean exit() {
         return false;
