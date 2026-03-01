@@ -4,26 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="Pridani logiky ukolu,tedka ma skoro kazda postava ukol a je finalni ukol po kterem se umozni vystoupit na Rolling Loud 2030,upraveni cen a reputaci aby hra byla vyvazenejsi.Odstraneni zbytecnych trid.Pridani novych dialogu">
-      <change afterPath="$PROJECT_DIR$/res/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Projekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projekt.iml" afterDir="false" />
+    <list default="true" id="9278726f-7d60-4188-ac23-7ffa28268455" name="Changes" comment="Pridani komentaru,pridani 6 testu,ktere testuji ruzne metody">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/ConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/ConsoleApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Freestyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Freestyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Hrac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Hrac.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Inventar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Inventar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Jdi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Jdi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Kup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Kup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Mluv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Mluv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Prozkoumej.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Prozkoumej.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Ukoly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Ukoly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/VytvoritSkladbu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/VytvoritSkladbu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HerniMechaniky/GameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HerniMechaniky/GameData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Postavy/Postavy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Postavy/Postavy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Predmety/Predmety.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Predmety/Predmety.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ukoly/Ukol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ukoly/Ukol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/HracTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/HracTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,25 +38,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.HracTest.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/jenik/IdeaProjects/Projekt/src",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.HracTest.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jenik/IdeaProjects/Projekt/src&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jenik\IdeaProjects\Projekt\src" />
@@ -260,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770557739259</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Pridani komentaru,pridani 6 testu,ktere testuji ruzne metody">
+      <option name="closed" value="true" />
+      <created>1772271102701</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1772271102701</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -284,6 +274,7 @@
     <MESSAGE value="zprovozneni prikazu mluv takze tedka funguje jednoduchy dialog, udelani prikazu prozkoumej takze ted se vypisou predmety a postavy v lokaci //TODO udelani realneho dialogu s moznostmi a odpovedmi" />
     <MESSAGE value="Pridani logiky vydavani skladeb a vseho okolo toho(rarity textu a beatu a skladeb,vytvareni textu,random jmena pro skladby beaty a texty//mozna upravenit tech jmen),,dialogu,freestyle battlu,kupovani predemtu|Pridani komentaru,.Upraveni prikazu napoveda,prozkoumej," />
     <MESSAGE value="Pridani logiky ukolu,tedka ma skoro kazda postava ukol a je finalni ukol po kterem se umozni vystoupit na Rolling Loud 2030,upraveni cen a reputaci aby hra byla vyvazenejsi.Odstraneni zbytecnych trid.Pridani novych dialogu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pridani logiky ukolu,tedka ma skoro kazda postava ukol a je finalni ukol po kterem se umozni vystoupit na Rolling Loud 2030,upraveni cen a reputaci aby hra byla vyvazenejsi.Odstraneni zbytecnych trid.Pridani novych dialogu" />
+    <MESSAGE value="Pridani komentaru,pridani 6 testu,ktere testuji ruzne metody" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pridani komentaru,pridani 6 testu,ktere testuji ruzne metody" />
   </component>
 </project>
