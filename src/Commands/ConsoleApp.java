@@ -19,24 +19,6 @@ public class ConsoleApp {
     private Hrac hrac;
 
     /**
-     * Konstruktor pro ConsoleApp, inicializuje herní data a hráče.
-     * 
-     * @param hrac instance hráče
-     */
-    public ConsoleApp(Hrac hrac) {
-        this.scanner = new Scanner(System.in);
-        this.commands = new HashMap<>();
-        this.isExit = false;
-
-        this.gameData = GameData.loadGameDataFromResources("/GameData.json");
-        Lokace start = gameData.findLocation("loc_byt");
-        if (start == null)
-            start = new Lokace("Fallback", "Fallback");
-
-        this.hrac = new Hrac("Player", start, gameData);
-    }
-
-    /**
      * Výchozí konstruktor pro ConsoleApp.
      */
     public ConsoleApp() {
